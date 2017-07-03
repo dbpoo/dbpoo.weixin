@@ -1,0 +1,26 @@
+<view class="video-wrapper" bindtap="onTap">
+  <view class="video-list">
+    <image src="../../images/temp/videolist_01.jpg" mode="widthFix"></image>
+    <view class="video-info">
+      <text>最新视频</text>
+    </view>
+  </view>
+  <view class="video-list">
+    <image src="../../images/temp/videolist_01.jpg" mode="widthFix"></image>
+    <view class="video-info">
+      <text>官方教学</text>
+    </view>
+  </view>
+  <view class="video-list">
+    <image src="../../images/temp/videolist_02.jpg" mode="widthFix"></image>
+    <view class="video-info">
+      <text>大师视频</text>
+    </view>
+  </view>
+  <view class="video-list">
+    <image src="../../images/temp/videolist_03.jpg" mode="widthFix"></image>
+    <view class="video-info">
+      <text>赛事视频</text>
+    </view>
+  </view>
+</view>

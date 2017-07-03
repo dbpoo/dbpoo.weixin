@@ -1,12 +1,38 @@
 {
-  "pages":[
+  "pages": [
+    "pages/skill/skill",
+    "pages/video/video",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/video/video-detail/video-detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0084e0",
+    "navigationBarTitleText": "SNK+",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "资讯",
+        "iconPath": "images/tab/home.png",
+        "selectedIconPath": "images/tab/home_selected.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "images/tab/video.png",
+        "selectedIconPath": "images/tab/video_selected.png"
+      },
+      {
+        "pagePath": "pages/skill/skill",
+        "text": "出招表",
+        "iconPath": "images/tab/skill.png",
+        "selectedIconPath": "images/tab/skill_selected.png"
+      }
+    ]
   }
 }

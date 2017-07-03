@@ -1,26 +1,18 @@
-//index.js
-//获取应用实例
-var app = getApp()
+var swiperData = require('../../api/swiper-data.js')
+
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {}
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    indicatorDots: true,
+    autoplay: true,
+    interval: 3000,
+    duration: 500,
+    circular: true,
+    indicatorColor: 'rgba(255,255,255,.3)',
+    indicatorActiveColor: '#ffffff'
   },
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
+    this.setData({
+      swiperImg: swiperData.swiperImg
     })
   }
 })

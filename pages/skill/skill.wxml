@@ -1,0 +1,72 @@
+<view class="skill-wrapper">
+  <view class="skill-list">
+    <image src="../../images/temp/kof.jpg" mode="widthFix"></image>
+    <view class="skill-info">
+      <text class="fontb">拳皇</text>
+      <text class="fonts">出招表</text>
+    </view>
+  </view>
+  <view class="skill-list">
+    <image src="../../images/temp/sh.jpg" mode="widthFix"></image>
+    <view class="skill-info">
+      <text class="fontb">侍魂</text>
+      <text class="fonts">出招表</text>
+    </view>
+  </view>
+  <view class="skill-list">
+    <image src="../../images/temp/elcs.jpg" mode="widthFix"></image>
+    <view class="skill-info">
+      <text class="fontb">饿狼传说</text>
+      <text class="fonts">出招表</text>
+    </view>
+  </view>
+  <view class="skill-list">
+    <image src="../../images/temp/hjzb.jpg" mode="widthFix"></image>
+    <view class="skill-info">
+      <text class="fontb">合金弹头</text>
+      <text class="fonts">出招表</text>
+    </view>
+  </view>
+  <view class="skill-list">
+    <image src="../../images/temp/kof.jpg" mode="widthFix"></image>
+    <view class="skill-info">
+      <text class="fontb">龙虎之拳</text>
+      <text class="fonts">出招表</text>
+    </view>
+  </view>
+  <view class="skill-list">
+    <image src="../../images/temp/kof.jpg" mode="widthFix"></image>
+    <view class="skill-info">
+      <text class="fontb">武力</text>
+      <text class="fonts">出招表</text>
+    </view>
+  </view>
+  <view class="skill-list">
+    <image src="../../images/temp/kof.jpg" mode="widthFix"></image>
+    <view class="skill-info">
+      <text class="fontb">月华之剑士</text>
+      <text class="fonts">出招表</text>
+    </view>
+  </view>
+  <view class="skill-list">
+    <image src="../../images/temp/kof.jpg" mode="widthFix"></image>
+    <view class="skill-info">
+      <text class="fontb">野兽梦魇</text>
+      <text class="fonts">出招表</text>
+    </view>
+  </view>
+  <view class="skill-list">
+    <image src="../../images/temp/kof.jpg" mode="widthFix"></image>
+    <view class="skill-info">
+      <text class="fontb">心跳魔女</text>
+      <text class="fonts">出招表</text>
+    </view>
+  </view>
+  <view class="skill-list">
+    <image src="../../images/temp/kof.jpg" mode="widthFix"></image>
+    <view class="skill-info">
+      <text class="fontb">回忆之日</text>
+      <text class="fonts">出招表</text>
+    </view>
+  </view>
+</view>

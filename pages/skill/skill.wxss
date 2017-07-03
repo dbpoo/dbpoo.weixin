@@ -1,0 +1,41 @@
+.skill-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-list {
+  width: 375rpx;
+  height: 375rpx;
+  position: relative;
+}
+
+.skill-list image {
+  width: 375rpx;
+  height: 375rpx;
+}
+
+.skill-info {
+  width: 375rpx;
+  height: 375rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.skill-info text {
+  width: 100%;
+  text-align: center;
+}
+.fontb{
+  font-size:24px;
+  color: #eee;
+}
+.fonts{
+  font-size:16px;
+  color:#0084e0;
+}

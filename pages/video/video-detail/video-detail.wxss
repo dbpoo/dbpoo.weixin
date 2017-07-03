@@ -1,0 +1,15 @@
+.video{
+  display: flex;
+  flex-direction: column;
+}
+.video video{
+  width: 100%;
+}
+.title{
+  display: flex;
+  padding:15rpx 30rpx 15rpx 10rpx;
+}
+.title image{
+  width:30px;
+  margin-right:10px
+}
