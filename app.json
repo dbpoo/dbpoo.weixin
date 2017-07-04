@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/skill/skill",
-    "pages/video/video",
     "pages/index/index",
-    "pages/video/video-detail/video-detail"
+    "pages/index/detail/detail",
+    "pages/video/video",
+    "pages/video/video-detail/video-detail",
+    "pages/skill/skill"
   ],
   "window": {
     "backgroundTextStyle": "light",

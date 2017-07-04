@@ -31,11 +31,12 @@
   width: 100%;
   text-align: center;
 }
-.fontb{
-  font-size:24px;
+
+.fontb {
+  font-size: 36rpx;
   color: #eee;
 }
-.fonts{
-  font-size:16px;
-  color:#0084e0;
+
+.fonts {
+  color: #f1f1f1;
 }

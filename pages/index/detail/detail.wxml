@@ -1,0 +1,8 @@
+<view class="detail-wrapper">
+  <image src="{{postDetail.image}}" class="detail-image" mode="aspectFill" wx:if="{{postDetail.image}}"></image>
+  <view class="detail">
+    <text class="title">{{postDetail.title}}</text>
+    <view class="horizon"></view>
+    <text class="content">{{postDetail.detail}}</text>
+  </view>
+</view>

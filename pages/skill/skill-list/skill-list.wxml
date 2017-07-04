@@ -1,0 +1,13 @@
+<view class="skill-list">
+  <view class="avatar-title">游戏角色</view>
+  <view class="avatar-list">
+    <image src="../../../images/temp/avatar.png"></image>
+    <image src="../../../images/temp/avatar.png"></image>
+    <image src="../../../images/temp/avatar.png"></image>
+    <image src="../../../images/temp/avatar.png"></image>
+    <image src="../../../images/temp/avatar.png"></image>
+    <image src="../../../images/temp/avatar.png"></image>
+    <image src="../../../images/temp/avatar.png"></image>
+    <image src="../../../images/temp/avatar.png"></image>
+  </view>
+</view>

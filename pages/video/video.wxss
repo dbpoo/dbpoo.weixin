@@ -20,4 +20,5 @@
   width:100%;
   text-align: center;
   color:#eee;
+  font-size:36rpx;
 }

@@ -1,0 +1,9 @@
+<template name="postItem">
+  <view class="item">
+    <image src="{{image}}" mode="widthFix" wx:if="{{image}}"></image>
+    <view class="item-info">
+      <text class="title">{{title}}</text>
+      <text class="time">{{time}}</text>
+    </view>
+  </view>
+</template>

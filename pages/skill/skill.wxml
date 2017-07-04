@@ -1,5 +1,5 @@
 <view class="skill-wrapper">
-  <view class="skill-list">
+  <view class="skill-list" bindtap="onTap">
     <image src="../../images/temp/kof.jpg" mode="widthFix"></image>
     <view class="skill-info">
       <text class="fontb">拳皇</text>

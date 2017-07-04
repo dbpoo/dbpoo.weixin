@@ -1,54 +1,15 @@
-<!--index.wxml-->
+<import src="item/item-template.wxml" />
 <view>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class="swiper-wrapper" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
-    <block wx:for="{{swiperImg}}" wx:key="swiperId">
-      <swiper-item>
-        <image src="{{item}}" style="width:100%"></image>
+    <block wx:for="{{swiperList}}" wx:key="swiperId">
+      <swiper-item bindtap="onTap" data-id="{{item.id}}">
+        <image src="{{item.picUrl}}" style="width:100%"></image>
       </swiper-item>
     </block>
   </swiper>
-  <view class="item-wrapper">
-    <view class="item">
-      <image src="../../images/temp/item_01.jpg" mode="widthFix"></image>
-      <view class="item-info">
-        <text class="title">拳皇97游戏介绍和背景故事拳皇97游戏介绍和背景故事</text>
-        <text class="time">2017-06-06</text>
-      </view>
+  <block wx:for="{{postList}}" wx:key="postId">
+    <view class="item-wrapper" bindtap="onTap" data-id="{{item.id}}">
+      <template is="postItem" data="{{...item}}"></template>
     </view>
-  </view>
-  <view class="item-wrapper">
-    <view class="item">
-      <image src="../../images/temp/item_01.jpg" mode="widthFix"></image>
-      <view class="item-info">
-        <text class="title">拳皇97游戏介绍和背景故事拳皇97游戏介绍和背景故事</text>
-        <text class="time">2017-06-06</text>
-      </view>
-    </view>
-  </view>
-  <view class="item-wrapper">
-    <view class="item">
-      <view class="item-info">
-        <text class="title">拳皇97游戏介绍和背景故事拳皇97游戏介绍和背景故事</text>
-        <text class="time">2017-06-06</text>
-      </view>
-    </view>
-  </view>
-  <view class="item-wrapper">
-    <view class="item">
-      <image src="../../images/temp/item_01.jpg" mode="widthFix"></image>
-      <view class="item-info">
-        <text class="title">拳皇97游戏介绍和背景故事拳皇97游戏介绍和背景故事</text>
-        <text class="time">2017-06-06</text>
-      </view>
-    </view>
-  </view>
-  <view class="item-wrapper">
-    <view class="item">
-      <image src="../../images/temp/item_01.jpg" mode="widthFix"></image>
-      <view class="item-info">
-        <text class="title">拳皇97游戏介绍和背景故事拳皇97游戏介绍和背景故事</text>
-        <text class="time">2017-06-06</text>
-      </view>
-    </view>
-  </view>
+  </block>
 </view>
