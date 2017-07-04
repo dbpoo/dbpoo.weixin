@@ -1,7 +1,4 @@
 function http(url, callback) {
-  wx.showLoading({
-    title: '加载中...',
-  })
   wx.request({
     url: url,
     method: 'GET',
@@ -9,7 +6,6 @@ function http(url, callback) {
       "Content-Type": "json"
     },
     success: function (res) {
-      wx.hideLoading();
       callback(res.data);
     },
     fail: function (error) {

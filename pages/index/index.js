@@ -14,32 +14,56 @@ Page({
     indicatorActiveColor: '#ffffff',
     page: 1,
     size: 20,
-    hasMore: true,
-    hasRefresh: false
+    hasMore: false,
+    hasRefresh: true,
+    loadTips: app.globalData.LOADING
   },
   onLoad: function () {
+    wx.showLoading({
+      title: app.globalData.LOADING,
+    })
+    this.getIndexData();
+  },
+  getIndexData: function () {
+    this.setData({
+      swiperList: [],
+      postList: []
+    })
     util.http(app.indexAPI.swiperList, this.getSwiperList)
     util.http(app.indexAPI.postList, this.getPostList)
   },
   getSwiperList: function (res) {
-    if(!res) return;
+    if (!res) return;
     this.setData({
       swiperList: res.data.slider
     })
   },
   getPostList: function (res) {
+    wx.hideLoading();
     if (!res) return;
     this.setData({
       postList: res.data.postData
     })
   },
   onPullDownRefresh: function () {
-    if (!this.data.hasRefresh) return;
-    console.log("刷新页面")
+    wx.stopPullDownRefresh()
+    wx.showLoading({
+      title: app.globalData.LOADING,
+    })
+    setTimeout(()=>{
+      this.getIndexData();
+    },2000)
   },
   onReachBottom: function () {
-    if (!this.data.hasMore) return;
-    console.log("加载更多")
+    if (this.data.hasMore) return;
+    this.setData({
+      hasMore: true
+    })
+    setTimeout(() => {
+      this.setData({
+        hasMore: false
+      })
+    }, 2000)
   },
   onTap(event) {
     var id = event.currentTarget.dataset.id;

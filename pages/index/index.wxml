@@ -12,4 +12,7 @@
       <template is="postItem" data="{{...item}}"></template>
     </view>
   </block>
+  <view class="load-more" wx:if="{{hasMore}}">
+    <text>{{loadTips}}</text>
+  </view>
 </view>

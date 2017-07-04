@@ -4,3 +4,7 @@ page{
   color:#404040;
   font-size:24rpx;
 }
+.load-more{
+  padding: 20px 0;
+  text-align:center;
+}
