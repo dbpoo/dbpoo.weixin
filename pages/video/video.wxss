@@ -20,5 +20,6 @@
   width:100%;
   text-align: center;
   color:#eee;
-  font-size:36rpx;
+  font-size:40rpx;
+  letter-spacing: 4rpx;
 }

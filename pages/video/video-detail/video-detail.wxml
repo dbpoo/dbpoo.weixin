@@ -1,8 +1,11 @@
 <view class="video-wrapper">
   <view class="video">
     <view class="title">
-      <image src="../../../images/icon/icon_normal.png" mode="widthFix"></image>
-      <text>拳皇精彩CG</text>
+      <view class="icon">
+        <image src="../../../images/icon/icon_normal.png" mode="widthFix"></image>
+        <text>拳皇精彩CG</text>
+      </view>
+      <text class="time">2017-06-06</text>
     </view>
     <video src="http://video.ledo.com/anhei2/anhei2_201703_main.mp4"></video>
   </view>
@@ -10,8 +13,11 @@
 <view class="video-wrapper">
   <view class="video">
     <view class="title">
-      <image src="../../../images/icon/icon_normal.png" mode="widthFix"></image>
-      <text>拳皇精彩CG</text>
+      <view class="icon">
+        <image src="../../../images/icon/icon_normal.png" mode="widthFix"></image>
+        <text>拳皇精彩CG</text>
+      </view>
+      <text class="time">2017-06-06</text>
     </view>
     <video src="http://video.ledo.com/anhei2/anhei2_201703_main.mp4"></video>
   </view>
@@ -19,8 +25,11 @@
 <view class="video-wrapper">
   <view class="video">
     <view class="title">
-      <image src="../../../images/icon/icon_normal.png" mode="widthFix"></image>
-      <text>拳皇精彩CG</text>
+      <view class="icon">
+        <image src="../../../images/icon/icon_normal.png" mode="widthFix"></image>
+        <text>拳皇精彩CG</text>
+      </view>
+      <text class="time">2017-06-06</text>
     </view>
     <video src="http://video.ledo.com/anhei2/anhei2_201703_main.mp4"></video>
   </view>
@@ -28,8 +37,11 @@
 <view class="video-wrapper">
   <view class="video">
     <view class="title">
-      <image src="../../../images/icon/icon_normal.png" mode="widthFix"></image>
-      <text>拳皇精彩CG</text>
+      <view class="icon">
+        <image src="../../../images/icon/icon_normal.png" mode="widthFix"></image>
+        <text>拳皇精彩CG</text>
+      </view>
+      <text class="time">2017-06-06</text>
     </view>
     <video src="http://video.ledo.com/anhei2/anhei2_201703_main.mp4"></video>
   </view>
