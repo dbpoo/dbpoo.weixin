@@ -4,7 +4,7 @@
   <scroll-view class="game" scroll-x>
     <view class="game-nav">
       <block wx:for="{{game}}" wx:key="gameId">
-        <text class="{{item.iscur ? 'on' : ''}}">{{item.name}}</text>
+        <text class="{{item.iscur ? 'on' : ''}}" catchtap="onTap" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</text>
       </block>
     </view>
   </scroll-view>
