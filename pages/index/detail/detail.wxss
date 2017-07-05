@@ -1,3 +1,4 @@
+@import "../../../wxParse/wxParse.wxss";
 .detail-wrapper{
   height:100vh;
   background-color:#fff;

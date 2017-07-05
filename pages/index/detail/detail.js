@@ -1,21 +1,19 @@
 var util = require('../../../utils/util.js');
+var WxParse = require('../../../wxParse/wxParse.js');
 var app = getApp();
 
 Page({
   data: {
-    postDetail: []
+    postDetail: {}
   },
   onLoad: function (option) {
-    this.postId = option.id;
-    util.http(app.indexAPI.postList, this.getPostDetail)
+    util.http(app.indexAPI.detail, this.getPostDetail)
   },
   getPostDetail: function (res) {
-    var postArr = res.data.postData;
-    var detailData = postArr.find((value) => {
-      return value.id == this.postId;
-    })
+    var article = res.data.body;
+    WxParse.wxParse('article', 'html', article, this, 5);
     this.setData({
-      postDetail: detailData
+      title: res.data.title
     })
   }
 })

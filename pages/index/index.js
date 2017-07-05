@@ -25,12 +25,8 @@ Page({
     this.getIndexData();
   },
   getIndexData: function () {
-    this.setData({
-      swiperList: [],
-      postList: []
-    })
-    util.http(app.indexAPI.swiperList, this.getSwiperList)
-    util.http(app.indexAPI.postList, this.getPostList)
+    util.http(app.indexAPI.swiper, this.getSwiperList)
+    util.http(app.indexAPI.post, this.getPostList)
   },
   getSwiperList: function (res) {
     if (!res) return;

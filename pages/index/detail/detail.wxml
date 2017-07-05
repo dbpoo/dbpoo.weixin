@@ -1,8 +1,11 @@
+<import src="../../../wxParse/wxParse.wxml"/> 
+
 <view class="detail-wrapper">
-  <image src="{{postDetail.image}}" class="detail-image" mode="aspectFill" wx:if="{{postDetail.image}}"></image>
   <view class="detail">
-    <text class="title">{{postDetail.title}}</text>
+    <text class="title">{{title}}</text>
     <view class="horizon"></view>
-    <text class="content">{{postDetail.detail}}</text>
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
   </view>
 </view>

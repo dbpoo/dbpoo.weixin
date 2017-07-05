@@ -5,8 +5,9 @@ App({
     COMPLETE: "亲，已经到底了噢..."
   },
   indexAPI: {
-    swiperList: "http://static.ledo.com/api/swiper-data.js?v=212",
-    postList: "http://static.ledo.com/api/post-data.js?v=223"
+    swiper: "http://static.ledo.com/api/swiper.js?v=212",
+    post: "http://static.ledo.com/api/post.js?v=223",
+    detail: "http://static.ledo.com/api/detail.js?v=234"
   },
   videoAPI: {
     lastestList: "",
