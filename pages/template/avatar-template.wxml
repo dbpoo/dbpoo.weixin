@@ -1,0 +1,6 @@
+<template name="avatarItem">
+  <view class="avatar">
+    <image src="{{image}}"></image>
+    <text>{{name}}</text>
+  </view>
+</template>

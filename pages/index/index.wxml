@@ -1,4 +1,4 @@
-<import src="item/item-template.wxml" />
+<import src="../template/item-template.wxml" />
 <view>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class="swiper-wrapper" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
     <block wx:for="{{swiperList}}" wx:key="swiperId">

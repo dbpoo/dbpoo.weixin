@@ -1,0 +1,18 @@
+<template name="videoItem">
+  <view class="video">
+    <view class="title">
+      <view class="icon">
+        <image src="../../../images/icon/icon_normal.png" mode="widthFix"></image>
+        <text>{{title}}</text>
+      </view>
+      <text class="time">{{time}}</text>
+    </view>
+    <view class="video-img" wx:if="{{!isPlay}}" bindtap="onTap" data-index="{{index}}">
+      <image src="{{image}}" class="video-bgimg" mode="scaleToFill"></image>
+      <view class="video-mask">
+        <image src="../../../images/icon/icon_play.png"></image>
+      </view>
+    </view>
+    <video src="{{video}}" id="{{id}}" bindplay="play" wx:if="{{isPlay}}" autoplay="true"></video>
+  </view>
+</template>

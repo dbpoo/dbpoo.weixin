@@ -1,4 +1,4 @@
-@import "item/item-template.wxss";
+@import "../template/item-template.wxss";
 
 .swiper-wrapper{
   width: 100%;

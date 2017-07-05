@@ -1,0 +1,19 @@
+.avatar {
+  width: 160rpx;
+}
+
+.avatar image {
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.avatar text {
+  width: 160rpx;
+  height: 20px;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+}

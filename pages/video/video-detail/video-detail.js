@@ -1,66 +1,34 @@
-// pages/video/video-detail/video-detail.js
+var util = require('../../../utils/util.js');
+var app = getApp();
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    'oldindex' : -1
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
+    wx.showLoading({
+      title: app.globalData.LOADING,
+    })
+    util.http(app.indexAPI.video, this.getVideoList)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  getVideoList: function (res) {
+    wx.hideLoading();
+    this.setData({
+      videoList: res.data.videoData
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  onTap: function (evt) {
+    var index = evt.currentTarget.dataset.index;
+    var oldindex = this.data.oldindex;
+    console.log(index + '+++' + oldindex)
+    if (index === this.oldindex) return;
+    if (oldindex >= 0) {
+      this.data.videoList[oldindex].isPlay = '';
+    }
+    this.data.videoList[index].isPlay = 'true';
+    this.setData({
+      videoList: this.data.videoList,
+      oldindex : index
+    })
   }
 })

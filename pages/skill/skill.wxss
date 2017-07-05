@@ -1,43 +1,43 @@
-.skill-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
+@import "../template/avatar-template.wxss";
 
-.skill-list {
-  width: 375rpx;
-  height: 375rpx;
-  position: relative;
-}
-
-.skill-list image {
-  width: 375rpx;
-  height: 375rpx;
-}
-
-.skill-info {
-  width: 375rpx;
-  height: 375rpx;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.skill-info text {
+.game {
   width: 100%;
-  text-align: center;
+  background-color: #fff;
 }
 
-.fontb {
-  font-size: 36rpx;
-  font-weight: 700;
-  color: #eee;
+.game-nav {
+  height: 45px;
+  line-height: 43px;
+  white-space: nowrap;
 }
 
-.fonts {
-  color: #f1f1f1;
+.game-nav .on {
+  border-bottom: 2px solid #0084e0;
+}
+
+.game-nav text {
+  padding: 0 10px;
+  display: inline-block;
+}
+
+.avatar-tit {
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-tit text {
+  font-size: 30rpx;
+}
+
+.avatar-list {
+  padding-left: 26rpx;
+}
+
+.avatar-wrap {
+  width: 160rpx;
+  float:left;
+  margin-right:20rpx;
+  margin-bottom:20rpx;
 }
