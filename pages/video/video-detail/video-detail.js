@@ -20,7 +20,6 @@ Page({
   onTap: function (evt) {
     var index = evt.currentTarget.dataset.index;
     var oldindex = this.data.oldindex;
-    console.log(index + '+++' + oldindex)
     if (index === this.oldindex) return;
     if (oldindex >= 0) {
       this.data.videoList[oldindex].isPlay = '';
