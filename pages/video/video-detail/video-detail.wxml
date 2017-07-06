@@ -3,7 +3,7 @@
 <view class="vbg">
   <block wx:for="{{videoList}}" wx:key="videoId">
     <view class="video-wrapper">
-      <template is="videoItem" data="{{...item,index}}"></template>
+      <template is="videoItem" data="{{...item, index, curIndex}}"></template>
     </view>
   </block>
 </view>
