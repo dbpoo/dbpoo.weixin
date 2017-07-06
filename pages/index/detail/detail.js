@@ -4,7 +4,7 @@ var app = getApp();
 
 Page({
   data: {
-    postDetail: {}
+    
   },
   onLoad: function (option) {
     util.http(app.indexAPI.detail, this.getPostDetail)

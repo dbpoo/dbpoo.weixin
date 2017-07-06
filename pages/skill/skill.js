@@ -52,6 +52,7 @@ Page({
       title: app.globalData.LOADING,
     })
     util.http(app.indexAPI.avatar, this.getAvatarList)
+
   },
   getAvatarList: function (res) {
     wx.hideLoading();
@@ -59,8 +60,21 @@ Page({
       avatarList: res.data.avatarData
     })
   },
-  onTap: function(evt) {
+  getAvatar: function(evt) {
     var index = evt.currentTarget.dataset.index;
-    this.data.videoList[index].iscur = "true"
+    var id = evt.currentTarget.dataset.id;
+    wx.showLoading({
+      title: app.globalData.LOADING,
+    })
+    this.setData({
+      currutTab: index
+    })
+    util.http(app.indexAPI.avatar + '?v=' + id, this.getAvatarList)
+  },
+  getAvatarInfo: function(evt) {
+    var id = evt.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: 'skill-detail/skill-detail?id=' + id
+    })
   }
 })

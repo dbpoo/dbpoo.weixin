@@ -1,5 +1,5 @@
 <template name="avatarItem">
-  <view class="avatar">
+  <view class="avatar" bindtap="getAvatarInfo" data-id="{{id}}">
     <image src="{{image}}"></image>
     <text>{{name}}</text>
   </view>

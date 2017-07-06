@@ -12,6 +12,8 @@
 }
 
 .game-nav .on {
+  font-weight: 700;
+  color:#0084e0;
   border-bottom: 2px solid #0084e0;
 }
 
@@ -37,7 +39,7 @@
 
 .avatar-wrap {
   width: 160rpx;
-  float:left;
-  margin-right:20rpx;
-  margin-bottom:20rpx;
+  float: left;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
 }
