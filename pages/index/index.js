@@ -61,8 +61,8 @@ Page({
       })
     }, 2000)
   },
-  onTap(event) {
-    var id = event.currentTarget.dataset.id;
+  onTap(evt) {
+    var id = evt.currentTarget.dataset.id;
     wx.navigateTo({
       url: 'detail/detail?id=' + id
     })

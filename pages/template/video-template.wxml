@@ -2,7 +2,7 @@
   <view class="video">
     <view class="title">
       <view class="icon">
-        <image src="../../../images/icon/icon_normal.png" mode="widthFix"></image>
+        <image src="/images/icon/icon_normal.png" mode="widthFix"></image>
         <text>{{title}}</text>
       </view>
       <text class="time">{{time}}</text>
@@ -10,7 +10,7 @@
     <view class="video-img" wx:if="{{curIndex !== index}}" bindtap="onTap" data-index="{{index}}">
       <image src="{{image}}" class="video-bgimg" mode="scaleToFill"></image>
       <view class="video-mask">
-        <image src="../../../images/icon/icon_play.png"></image>
+        <image src="/images/icon/icon_play.png"></image>
       </view>
     </view>
     <video src="{{video}}" bindplay="play" wx:if="{{curIndex === index}}" autoplay="true"></video>

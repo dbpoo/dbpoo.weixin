@@ -1,3 +1,5 @@
+var app = getApp();
+
 function http(url, callback) {
   wx.request({
     url: url,
@@ -6,7 +8,11 @@ function http(url, callback) {
       "Content-Type": "json"
     },
     success: function (res) {
-      callback(res.data);
+      if (res.data.code === app.globalData.ERR_OK) {
+        callback(res.data);
+      } else {
+        console.log('no data');
+      }
     },
     fail: function (error) {
       console.log(error)

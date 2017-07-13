@@ -1,6 +1,7 @@
 //app.js
 App({
   globalData: {
+    ERR_OK: 0,
     LOADING: "正在加载中...",
     COMPLETE: "亲，已经到底了噢..."
   },
