@@ -1,4 +1,3 @@
-// pages/video/video.js
 Page({
   data: {
     videoList: [
@@ -26,7 +25,7 @@ Page({
   },
   onTap: function () {
     wx.navigateTo({
-      url: 'video-detail/video-detail',
+      url: 'video-list/video-list',
     })
   }
 })

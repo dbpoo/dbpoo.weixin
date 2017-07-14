@@ -10,7 +10,7 @@ App({
     post: "https://static.ledo.com/api/post.js",
     detail: "https://static.ledo.com/api/detail.js",
     video: "https://static.ledo.com/api/video.js",
-    avatar: "https://static.ledo.com/api/avatar.js",
+    avatar: "http://static.ledo.com/api/avatar.js?v=22",
     skill: "https://static.ledo.com/api/people.js",
     search: 'https://static.ledo.com/api/post.js'
   },
