@@ -1,23 +1,12 @@
-<import src="../template/avatar-template.wxml" />
-
-<view class="skill-wrapper">
-  <scroll-view class="game" scroll-x>
-    <view class="game-nav">
-      <block wx:for="{{game}}" wx:key="gameId">
-        <text class="{{currutTab === index ? 'on' : ''}}" bindtap="getAvatar" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</text>
-      </block>
-    </view>
-  </scroll-view>
-  <view class="avatar-wrapper">
-    <view class="avatar-tit">
-      <text>拳皇 人物表</text>
-    </view>
-    <view class="avatar-list">
-      <block wx:for="{{avatarList}}" wx:key="avatarId">
-        <view class="avatar-wrap" data-id="{{item.id}}">
-          <template is="avatarItem" data="{{...item}}"></template>
+<view class="sbg">
+  <block wx:for="{{skillList}}" wx:key="skillId">
+    <view class="skill-wrapper" bindtap="onTap">
+      <view class="skill-list">
+        <image src="{{item.image}}" mode="widthFix"></image>
+        <view class="skill-info">
+          <text>{{item.title}}</text>
         </view>
-      </block>
+      </view>
     </view>
-  </view>
+  </block>
 </view>

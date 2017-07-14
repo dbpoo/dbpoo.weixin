@@ -1,0 +1,52 @@
+@import "../../template/avatar-template.wxss";
+
+.skill-wrapper{
+  padding-top: 55px;
+}
+
+.game {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.game-nav {
+  height: 45px;
+  line-height: 43px;
+  white-space: nowrap;
+}
+
+.game-nav .on {
+  font-weight: 700;
+  color: #0084e0;
+  border-bottom: 2px solid #0084e0;
+}
+
+.game-nav text {
+  padding: 0 10px;
+  display: inline-block;
+}
+
+.avatar-tit {
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-tit text {
+  font-size: 30rpx;
+}
+
+.avatar-list {
+  padding-left: 26rpx;
+}
+
+.avatar-wrap {
+  width: 160rpx;
+  float: left;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}

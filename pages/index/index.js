@@ -19,7 +19,8 @@ Page({
     loadTips: app.globalData.LOADING,
     isShow: false,
     placeholder: '请输入游戏角色',
-    searchValue: ''
+    searchValue: '',
+    searchHotShow: true
   },
   onLoad: function () {
     wx.showLoading({
@@ -49,9 +50,9 @@ Page({
     wx.showLoading({
       title: app.globalData.LOADING,
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       this.getIndexData();
-    },2000)
+    }, 2000)
   },
   onReachBottom: function () {
     if (this.data.hasMore) return;
@@ -64,24 +65,34 @@ Page({
       })
     }, 2000)
   },
-  onTap: function(evt) {
+  onTap: function (evt) {
     var id = evt.currentTarget.dataset.id;
     wx.navigateTo({
       url: 'detail/detail?id=' + id
     })
   },
-  onBindFocus: function(evt) {
+  onBindFocus: function (evt) {
     this.setData({
       isShow: true
     })
   },
-  onCancel: function(evt) {
+  onCancel: function (evt) {
     this.setData({
       isShow: false,
-      searchValue: ''
+      searchValue: '',
+      searchList: '',
+      searchHotShow: true
     })
   },
-  onBindBlur: function() {
-    console.log('请求搜索数据')
+  onBindBlur: function () {
+    util.http(app.indexAPI.post, this.getSearchList)
+  },
+  getSearchList: function (res) {
+    wx.hideLoading();
+    if (!res) return;
+    this.setData({
+      searchList: res.data.postData,
+      searchHotShow: false
+    })
   }
 })

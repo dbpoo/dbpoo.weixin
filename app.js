@@ -7,11 +7,12 @@ App({
   },
   indexAPI: {
     swiper: "https://static.ledo.com/api/swiper.js",
-    post: "https://static.ledo.com/api/post.js?v=223",
+    post: "https://static.ledo.com/api/post.js",
     detail: "https://static.ledo.com/api/detail.js",
     video: "https://static.ledo.com/api/video.js",
     avatar: "https://static.ledo.com/api/avatar.js",
-    skill: "https://static.ledo.com/api/people.js"
+    skill: "https://static.ledo.com/api/people.js",
+    search: 'https://static.ledo.com/api/post.js'
   },
   videoAPI: {
     lastestList: "",

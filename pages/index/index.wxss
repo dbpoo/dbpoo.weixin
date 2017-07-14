@@ -14,11 +14,12 @@
 .topnav {
   height: 40px;
   line-height: 40px;
-  background-color: #ccc;
+  background-color: #efefef;
   display: flex;
 }
 
 .topnav text {
   width: 100%;
+  font-size: 14px;
   text-align: center;
 }
