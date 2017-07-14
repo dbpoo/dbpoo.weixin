@@ -1,5 +1,8 @@
 <import src="../template/item-template.wxml" />
-<view>
+<import src="../template/search-template.wxml" />
+
+<template is="search" data="{{placeholder,searchValue,isShow}}"></template>
+<view class="container" wx:if="{{!isShow}}">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class="swiper-wrapper" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
     <block wx:for="{{swiperList}}" wx:key="swiperId">
       <swiper-item bindtap="onTap" data-id="{{item.id}}">
@@ -7,12 +10,43 @@
       </swiper-item>
     </block>
   </swiper>
+  <view class="topnav">
+    <text>热门</text>
+    <text>新闻</text>
+    <text>公告</text>
+    <text>教学</text>
+  </view>
   <block wx:for="{{postList}}" wx:key="postId">
     <view class="item-wrapper" bindtap="onTap" data-id="{{item.id}}">
       <template is="postItem" data="{{...item}}"></template>
     </view>
   </block>
-  <view class="load-more" wx:if="{{hasMore}}">
-    <text>{{loadTips}}</text>
+</view>
+<view class="search-wrapper" wx:if="{{isShow}}">
+  <view class="search-hot">
+    <view class="search-hot-t">热门游戏</view>
+    <view class="search-hot-keys">
+      <text>拳皇97</text>
+      <text>拳皇98</text>
+      <text>拳皇99</text>
+      <text>拳皇2000</text>
+      <text>龙虎之拳</text>
+      <text>饿狼传说</text>
+      <text>侍魂</text>
+      <text>夜月传说</text>
+    </view>
+    <view class="search-hot-t">热门角色</view>
+    <view class="search-hot-keys">
+      <text>八神庵</text>
+      <text>八神庵</text>
+      <text>八神庵</text>
+      <text>八神庵</text>
+    </view>
   </view>
+  <view class="search-result">
+
+  </view>
+</view>
+<view class="load-more" wx:if="{{hasMore}}">
+  <text>{{loadTips}}</text>
 </view>

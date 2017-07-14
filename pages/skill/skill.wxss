@@ -1,8 +1,15 @@
 @import "../template/avatar-template.wxss";
 
+.skill-wrapper{
+  padding-top: 55px;
+}
+
 .game {
   width: 100%;
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .game-nav {
@@ -13,7 +20,7 @@
 
 .game-nav .on {
   font-weight: 700;
-  color:#0084e0;
+  color: #0084e0;
   border-bottom: 2px solid #0084e0;
 }
 

@@ -1,0 +1,23 @@
+.search {
+  height: 50px;
+  background-color: #0084e0;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  width: 100%;
+  line-height: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+.search .cancelBtn {
+  width: 70px;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}

@@ -16,7 +16,10 @@ Page({
     size: 20,
     hasMore: false,
     hasRefresh: true,
-    loadTips: app.globalData.LOADING
+    loadTips: app.globalData.LOADING,
+    isShow: false,
+    placeholder: '请输入游戏角色',
+    searchValue: ''
   },
   onLoad: function () {
     wx.showLoading({
@@ -61,10 +64,24 @@ Page({
       })
     }, 2000)
   },
-  onTap(evt) {
+  onTap: function(evt) {
     var id = evt.currentTarget.dataset.id;
     wx.navigateTo({
       url: 'detail/detail?id=' + id
     })
+  },
+  onBindFocus: function(evt) {
+    this.setData({
+      isShow: true
+    })
+  },
+  onCancel: function(evt) {
+    this.setData({
+      isShow: false,
+      searchValue: ''
+    })
+  },
+  onBindBlur: function() {
+    console.log('请求搜索数据')
   }
 })
