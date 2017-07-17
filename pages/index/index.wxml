@@ -11,10 +11,10 @@
     </block>
   </swiper>
   <view class="topnav">
-    <text>热门</text>
-    <text>新闻</text>
-    <text>公告</text>
-    <text>教学</text>
+    <text data-id='0' bindtap="onNav" class="{{navcur==0?'cur':''}}">热门</text>
+    <text data-id='1' bindtap="onNav" class="{{navcur==1?'cur':''}}">新闻</text>
+    <text data-id='2' bindtap="onNav" class="{{navcur==2?'cur':''}}">公告</text>
+    <text data-id='3' bindtap="onNav" class="{{navcur==3?'cur':''}}">教学</text>
   </view>
   <block wx:for="{{postList}}" wx:key="postId">
     <view class="item-wrapper" bindtap="onTap" data-id="{{item.id}}">

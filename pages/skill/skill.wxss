@@ -30,7 +30,7 @@
   letter-spacing: 4rpx;
 }
 
-.sub-skill {
+.sub-skill-block {
   font-size:30rpx;
   padding:10px 0;
   color: #fff;
@@ -38,6 +38,6 @@
   border-bottom: 1px solid #333;
 }
 
-.sub-skill:last-child{
+.sub-skill-block:last-child{
   border-bottom: 0px;
 }

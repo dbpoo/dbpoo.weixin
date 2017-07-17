@@ -20,7 +20,8 @@ Page({
     isShow: false,
     placeholder: '请输入游戏角色',
     searchValue: '',
-    searchHotShow: true
+    searchHotShow: true,
+    navcur: 0
   },
   onLoad: function () {
     wx.showLoading({
@@ -30,7 +31,7 @@ Page({
   },
   getIndexData: function () {
     util.http(app.indexAPI.swiper, this.getSwiperList)
-    util.http(app.indexAPI.post, this.getPostList)
+    util.http(app.indexAPI.post + '?nav=' + this.data.navcur, this.getPostList)
   },
   getSwiperList: function (res) {
     if (!res) return;
@@ -86,6 +87,14 @@ Page({
   },
   onBindBlur: function () {
     util.http(app.indexAPI.post, this.getSearchList)
+  },
+  onNav: function(evt) {
+    var index = evt.currentTarget.dataset.id;
+    if(this.data.navcur == index) return;
+    this.setData({
+      navcur: index
+    })
+    util.http(app.indexAPI.post + '?nav=' + this.data.navcur, this.getPostList)
   },
   getSearchList: function (res) {
     wx.hideLoading();

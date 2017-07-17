@@ -3,7 +3,7 @@ var app = getApp();
 
 Page({
   data: {
-
+    tempIndex: ''
   },
   onLoad: function () {
     wx.showLoading({
@@ -16,6 +16,18 @@ Page({
     this.setData({
       skillList: res.data.gameData
     })
+  },
+  onToggle: function (evt) {
+    var index = evt.currentTarget.dataset.id;
+    if(this.data.type === index){
+      this.setData({
+        type: ''
+      })
+    } else {
+      this.setData({
+        type: index
+      })
+    }    
   },
   onTap: function () {
     wx.navigateTo({

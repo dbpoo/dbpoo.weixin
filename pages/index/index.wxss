@@ -23,3 +23,7 @@
   font-size: 14px;
   text-align: center;
 }
+
+.topnav .cur {
+  background-color: #d3d3d3;
+}

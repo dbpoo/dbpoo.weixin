@@ -13,7 +13,7 @@ App({
     avatar: 'http://static.ledo.com/api/avatar.js?v=22',
     skill: 'https://static.ledo.com/api/people.js',
     search: 'https://static.ledo.com/api/post.js',
-    game: 'https://static.ledo.com/api/game.js'
+    game: 'https://static.ledo.com/api/game.js?v=22'
   },
   videoAPI: {
     lastestList: '',

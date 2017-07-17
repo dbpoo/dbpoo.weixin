@@ -1,13 +1,15 @@
 <view class="sbg">
   <block wx:for="{{skillList}}" wx:key="skillId">
-    <view class="skill-wrapper" bindtap="onToggle" wx:if="{{item.sublink.length}}">
+    <view class="skill-wrapper" bindtap="onToggle" data-id="{{index}}" wx:if="{{item.sublink.length}}">
       <view class="skill-list">
         <image src="{{item.image}}" mode="widthFix"></image>
         <view class="skill-info">
           <text>{{item.title}}</text>
         </view>
-        <view class="sub-skill" bindtap="onTap" wx:for="{{item.sublink}}" wx:for-index="idx" wx:for-item="itemSub">
-          {{itemSub.subTitle}}
+        <view class="sub-skill sub-skill" wx:if="{{type === index}}">
+          <view class="sub-skill-block" bindtap="onTap" wx:for="{{item.sublink}}" wx:for-index="idx" wx:for-item="itemSub"  wx:key="subskillId">
+            {{itemSub.subTitle}}
+          </view>
         </view>
       </view>
     </view>
