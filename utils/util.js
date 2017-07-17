@@ -20,6 +20,16 @@ function http(url, callback) {
   })
 }
 
+function textFilter(str) {
+  var pattern = new RegExp(/["' <>%;)(&+]/);
+  var tempStr = '';
+  for (var i = 0; i < str.length; i++) {
+    tempStr += str.substr(i, 1).replace(pattern, '');
+  }
+  return tempStr;  
+}
+
 module.exports = {
-  http: http
+  http,
+  textFilter
 }

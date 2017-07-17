@@ -25,7 +25,7 @@ Page({
     })
   },
   searchkey: function (evt) {
-    this.data.keywords = evt.currentTarget.dataset.key;
+    this.data.keywords = util.textFilter(evt.currentTarget.dataset.key);
     this.setData({
       searchValue: this.data.keywords
     });
@@ -44,7 +44,7 @@ Page({
     wx.navigateBack();
   },
   onBindBlur: function (evt) {
-    this.data.keywords = evt.detail.value;
+    this.data.keywords = util.textFilter(evt.detail.value);
     wx.showLoading({
       title: app.globalData.LOADING,
     })
@@ -54,6 +54,7 @@ Page({
     wx.hideLoading();
     if (!res) return;
     this.setData({
+      searchValue: this.data.keywords,
       total: res.data.total,
       searchList: res.data.searchData,
       searchHotShow: false

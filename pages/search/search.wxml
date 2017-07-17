@@ -6,11 +6,11 @@
   <view class="search-hot" wx:if="{{searchHotShow}}">
     <view class="search-hot-t">热门游戏</view>
     <view class="search-hot-keys">
-      <text wx:for="{{hotkey}}" data-key="{{hotkey[index]}}" bindtap="searchkey">{{hotkey[index]}}</text>
+      <text wx:for="{{hotkey}}" wx:key="hotkeyID" data-key="{{hotkey[index]}}" bindtap="searchkey">{{hotkey[index]}}</text>
     </view>
     <view class="search-hot-t">热门角色</view>
     <view class="search-hot-keys">
-      <text wx:for="{{actorkey}}" data-key="{{actorkey[index]}}" bindtap="searchkey">{{actorkey[index]}}</text>
+      <text wx:for="{{actorkey}}" wx:key="actorkeyID" data-key="{{actorkey[index]}}" bindtap="searchkey">{{actorkey[index]}}</text>
     </view>
   </view>
   <view class="search-result" wx:if="{{!searchHotShow}}">
