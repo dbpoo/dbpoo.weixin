@@ -17,7 +17,7 @@ App({
     skill: 'https://static.ledo.com/api/people.js',
     search: 'https://static.ledo.com/api/post.js',
     game: 'https://static.ledo.com/api/game.js?v=22',
-    search: 'http://static.ledo.com/api/search.js?v=22',
+    search: 'http://static.ledo.com/api/search.js?v=33',
     searchkey: 'http://static.ledo.com/api/searchkey.js?v=33'
   },
   videoAPI: {

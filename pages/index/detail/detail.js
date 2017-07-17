@@ -6,8 +6,9 @@ Page({
   data: {
     
   },
-  onLoad: function (option) {
-    util.http(app.indexAPI.detail, this.getPostDetail)
+  onLoad: function (options) {
+    var id = options.id;
+    util.http(app.indexAPI.detail + '?id=' + id, this.getPostDetail)
   },
   getPostDetail: function (res) {
     var article = res.data.body;

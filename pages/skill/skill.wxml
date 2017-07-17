@@ -7,13 +7,13 @@
           <text>{{item.title}}</text>
         </view>
         <view class="sub-skill sub-skill" wx:if="{{type === index}}">
-          <view class="sub-skill-block" bindtap="onTap" wx:for="{{item.sublink}}" wx:for-index="idx" wx:for-item="itemSub"  wx:key="subskillId">
+          <view class="sub-skill-block" bindtap="onTap" data-id="{{itemSub.subID}}" wx:for="{{item.sublink}}" wx:for-index="idx" wx:for-item="itemSub"  wx:key="subskillId">
             {{itemSub.subTitle}}
           </view>
         </view>
       </view>
     </view>
-    <view class="skill-wrapper" bindtap="onTap" wx:if="{{!item.sublink.length}}">
+    <view class="skill-wrapper" data-id="{{item.id}}" bindtap="onTap" wx:if="{{!item.sublink.length}}">
       <view class="skill-list">
         <image src="{{item.image}}" mode="widthFix"></image>
         <view class="skill-info">

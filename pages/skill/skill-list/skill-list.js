@@ -7,10 +7,11 @@ Page({
     showMore: false
   },
   onLoad: function (options) {
+    var id = options.id;
     wx.showLoading({
       title: app.globalData.LOADING,
     })
-    util.http(app.indexAPI.avatar, this.getAvatarList)
+    util.http(app.indexAPI.avatar + '?id=' + id, this.getAvatarList)
 
   },
   getAvatarList: function (res) {

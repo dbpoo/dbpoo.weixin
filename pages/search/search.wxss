@@ -1,0 +1,21 @@
+@import "../template/search-template.wxss";
+@import "../template/item-template.wxss";
+
+.search-hot{
+  padding: 30rpx 10rpx 0 20rpx;
+}
+
+.search-hot-t{
+  font-size:28rpx;
+  color:#acacae;
+  margin: 20rpx 0;
+}
+
+.search-hot-keys text{
+  padding:10rpx;
+  background-color:#fff;
+  border:1px solid #ccc;
+  border-radius: 10rpx;
+  margin:10rpx;
+  display:inline-block;
+}

@@ -1,0 +1,26 @@
+<import src="../template/search-template.wxml" />
+<import src="../template/item-template.wxml" />
+
+<template is="search" data="{{placeholder,searchValue,isSearch}}"></template>
+<view class="search-wrapper">
+  <view class="search-hot" wx:if="{{searchHotShow}}">
+    <view class="search-hot-t">热门游戏</view>
+    <view class="search-hot-keys">
+      <text wx:for="{{hotkey}}" data-key="{{hotkey[index]}}" bindtap="searchkey">{{hotkey[index]}}</text>
+    </view>
+    <view class="search-hot-t">热门角色</view>
+    <view class="search-hot-keys">
+      <text wx:for="{{actorkey}}" data-key="{{actorkey[index]}}" bindtap="searchkey">{{actorkey[index]}}</text>
+    </view>
+  </view>
+  <view class="search-result" wx:if="{{!searchHotShow}}">
+    <block wx:for="{{searchList}}" wx:key="searchId">
+      <view class="item-wrapper" bindtap="onTap" data-id="{{item.id}}">
+        <template is="postItem" data="{{...item}}"></template>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="load-more" wx:if="{{hasMore}}">
+  <text class="{{isComplete?'complele': ''}}">{{loadTips}}</text>
+</view>

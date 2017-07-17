@@ -29,9 +29,10 @@ Page({
       })
     }    
   },
-  onTap: function () {
+  onTap: function (evt) {
+    var id = evt.currentTarget.dataset.id;
     wx.navigateTo({
-      url: 'skill-list/skill-list',
+      url: 'skill-list/skill-list?id=' + id,
     })
   }
 })
