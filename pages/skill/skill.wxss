@@ -4,18 +4,16 @@
 }
 
 .skill-list {
-  height: 300rpx;
   position: relative;
 }
 
 .skill-list image {
   width: 100%;
-  height: 300rpx;
 }
 
 .skill-info {
   width: 100%;
-  height: 300rpx;
+  height: 200rpx;
   display: flex;
   align-items: center;
   position: absolute;
@@ -30,4 +28,16 @@
   color: #eee;
   font-size: 40rpx;
   letter-spacing: 4rpx;
+}
+
+.sub-skill {
+  font-size:30rpx;
+  padding:10px 0;
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.sub-skill:last-child{
+  border-bottom: 0px;
 }

@@ -25,8 +25,8 @@
   display: inline-block;
 }
 
-.avatar-tit{
-  margin-bottom: 30px;
+.avatar-tit {
+  margin-bottom: 30rpx;
 }
 
 .avatar-tit image {
@@ -39,16 +39,28 @@
 .avatar-tit .name {
   width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  font-size: 40rpx;
+  font-weight: bold;
+  top: 20rpx;
+  left: 20px;
 }
 
 .avatar-tit .info {
-  background-color: #393939;
+  background: -webkit-gradient(linear, 0 0, 0 50, from(#fff), to(#393939));
   margin-top: 300rpx;
   position: relative;
-  padding: 30rpx;
+  line-height: 20px;
+  padding: 20rpx;
   color: #fff;
+}
+
+.avatar-tit .info .toggle {
+  color: #0084e0;
+}
+
+.avatar-tit .btn text {
+  display: block;
+  border: 1px solid #fff;
 }
 
 .avatar-list {

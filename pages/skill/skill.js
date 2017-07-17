@@ -1,32 +1,21 @@
+var util = require('../../utils/util.js');
+var app = getApp();
+
 Page({
   data: {
-    skillList: [
-      {
-        id: '1',
-        title: '拳皇系列',
-        image: '../../images/temp/videolist_01.jpg'
-      },
-      {
-        id: '2',
-        title: '合金弹头',
-        image: '../../images/temp/videolist_02.jpg'
-      },
-      {
-        id: '3',
-        title: '饿狼传说',
-        image: '../../images/temp/videolist_03.jpg'
-      },
-      {
-        id: '4',
-        title: '龙虎之拳',
-        image: '../../images/temp/videolist_01.jpg'
-      },
-      {
-        id: '5',
-        title: '侍魂',
-        image: '../../images/temp/videolist_01.jpg'
-      }
-    ]
+
+  },
+  onLoad: function () {
+    wx.showLoading({
+      title: app.globalData.LOADING,
+    })
+    util.http(app.indexAPI.game, this.getGameList)
+  },
+  getGameList: function (res, index) {
+    wx.hideLoading();
+    this.setData({
+      skillList: res.data.gameData
+    })
   },
   onTap: function () {
     wx.navigateTo({

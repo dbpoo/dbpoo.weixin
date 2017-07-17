@@ -3,7 +3,8 @@ var app = getApp();
 
 Page({
   data: {
-    currutTab: 0
+    currutTab: 0,
+    showMore: false
   },
   onLoad: function (options) {
     wx.showLoading({
@@ -13,11 +14,13 @@ Page({
 
   },
   getAvatarList: function (res) {
+    var that = this;
     wx.hideLoading();
     this.setData({
       avatarName: res.data.avatarName,
       avatarImage: res.data.avatarImage,
-      avatarInfo: res.data.avatarInfo,
+      avatarInfoAll: res.data.avatarInfo,
+      avatarInfo: that.curstr(res.data.avatarInfo, 200),
       avatarList: res.data.avatarData
     })
   },
@@ -26,5 +29,40 @@ Page({
     wx.navigateTo({
       url: '../skill-detail/skill-detail?id=' + id
     })
+  },
+  toggle: function () {
+    var tempStr = '';
+    var tempShow = this.data.showMore;
+    
+    tempShow = !tempShow;
+    if (tempShow) {
+      tempStr = this.data.avatarInfoAll;
+    } else {
+      tempStr = this.curstr(this.data.avatarInfoAll, 200)
+    }
+    this.setData({
+      showMore: tempShow,
+      avatarInfo: tempStr
+    })
+  },
+  curstr: function (str, len) {
+    var temp;
+    var icount = 0;
+    var patrn = /[^\x00-\xff]/;
+    var strre = "";
+    for (var i = 0; i < str.length; i++) {
+      if (icount < len - 1) {
+        temp = str.substr(i, 1);
+        if (patrn.exec(temp) == null) {
+          icount = icount + 1
+        } else {
+          icount = icount + 2
+        }
+        strre += temp
+      } else {
+        break;
+      }
+    }
+    return strre + "..."
   }
 })

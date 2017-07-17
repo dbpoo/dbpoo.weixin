@@ -5,7 +5,11 @@
     <view class="avatar-tit">
       <image src="{{avatarImage}}" mode="widthFix"></image>
       <view class="name">{{avatarName}}</view>
-      <view class="info">{{avatarInfo}}</view>
+      <view class="info">
+        <text>{{avatarInfo}}</text>
+        <text class="toggle" catchtap="toggle" wx:if="{{!showMore}}">展开</text>
+        <text class="toggle" catchtap="toggle" wx:if="{{showMore}}">收起</text>
+      </view>
     </view>
     <view class="avatar-list">
       <block wx:for="{{avatarList}}" wx:key="avatarId">
