@@ -1,9 +1,9 @@
 <import src="../template/item-template.wxml" />
 <import src="../template/search-template.wxml" />
 
-<template is="search" data="{{placeholder,searchValue,isShow}}"></template>
-<view class="container" wx:if="{{!isShow}}">
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class="swiper-wrapper" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
+<template is="search" data="{{placeholder,searchValue,isSearch}}"></template>
+<view class="container" wx:if="{{!isSearch}}">
+  <swiper indicator-dots autoplay interval="3000" duration="500" circular class="swiper-wrapper" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#ffffff">
     <block wx:for="{{swiperList}}" wx:key="swiperId">
       <swiper-item bindtap="onTap" data-id="{{item.id}}">
         <image src="{{item.picUrl}}" style="width:100%"></image>
@@ -22,25 +22,15 @@
     </view>
   </block>
 </view>
-<view class="search-wrapper" wx:if="{{isShow}}">
+<view class="search-wrapper" wx:if="{{isSearch}}">
   <view class="search-hot" wx:if="{{searchHotShow}}">
     <view class="search-hot-t">热门游戏</view>
     <view class="search-hot-keys">
-      <text>拳皇97</text>
-      <text>拳皇98</text>
-      <text>拳皇99</text>
-      <text>拳皇2000</text>
-      <text>龙虎之拳</text>
-      <text>饿狼传说</text>
-      <text>侍魂</text>
-      <text>夜月传说</text>
+      <text wx:for="{{hotkey}}" data-key="{{hotkey[index]}}" bindtap="searchkey">{{hotkey[index]}}</text>
     </view>
     <view class="search-hot-t">热门角色</view>
     <view class="search-hot-keys">
-      <text>八神庵</text>
-      <text>八神庵</text>
-      <text>八神庵</text>
-      <text>八神庵</text>
+      <text wx:for="{{actorkey}}" data-key="{{actorkey[index]}}" bindtap="searchkey">{{actorkey[index]}}</text>
     </view>
   </view>
   <view class="search-result" wx:if="{{!searchHotShow}}">
@@ -52,5 +42,5 @@
   </view>
 </view>
 <view class="load-more" wx:if="{{hasMore}}">
-  <text>{{loadTips}}</text>
+  <text class="{{isComplete?'complele': ''}}">{{loadTips}}</text>
 </view>

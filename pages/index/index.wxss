@@ -25,5 +25,5 @@
 }
 
 .topnav .cur {
-  background-color: #d3d3d3;
+  background-color: #f6f6f6;
 }
