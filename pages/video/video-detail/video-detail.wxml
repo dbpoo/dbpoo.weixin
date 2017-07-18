@@ -1,9 +1,6 @@
-<import src="../../template/video-template.wxml" />
-
-<view class="vbg">
-  <block wx:for="{{videoList}}" wx:key="videoId">
-    <view class="video-wrapper">
-      <template is="videoItem" data="{{...item, index, curIndex}}"></template>
-    </view>
-  </block>
+<view class="vdetail">
+  <view class="vdetail-tit">{{title}}</view>
+  <view class="vdetail-con">
+    <video src="{{video}}"></video>
+  </view>
 </view>

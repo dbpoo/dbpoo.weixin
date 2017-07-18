@@ -53,7 +53,6 @@ Page({
   },
   onBindBlur: function (evt) {
     this.data.keywords = util.textFilter(evt.detail.value);
-    console.log(this.data.keywords)
     if (!this.data.keywords) {
       this.setData({
         searchList: [],

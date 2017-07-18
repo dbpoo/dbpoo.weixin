@@ -21,6 +21,7 @@ App({
     searchkey: 'https://static.ledo.com/api/searchkey.js',
     lastestList: 'https://static.ledo.com/api/videolastest.js',
     teachList: 'https://static.ledo.com/api/videoteach.js',
-    hotList: 'https://static.ledo.com/api/videohot.js'
+    hotList: 'https://static.ledo.com/api/videohot.js',
+    video: 'http://static.ledo.com/api/detailvideo.js'
   }
 })
