@@ -1,6 +1,10 @@
 <view class="vdetail">
   <view class="vdetail-tit">{{title}}</view>
+  <view class="horizon"></view>
   <view class="vdetail-con">
-    <video src="{{video}}"></video>
+    <video src="{{video}}" autoplay></video>
+  </view>
+  <view class="vdetail-info">
+    {{info}}
   </view>
 </view>

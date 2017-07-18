@@ -22,10 +22,5 @@
 }
 
 .video-wrapper {
-  padding: 30rpx 0 0 0;
-}
-
-.video {
-  float: left;
-  margin: 0 0 30rpx 30rpx;
+  padding: 0 0 0 10rpx;
 }

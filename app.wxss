@@ -2,7 +2,7 @@ page {
   font-family: Microsoft YaHei;
   background-color: #f6f6f6;
   color: #404040;
-  font-size: 24rpx;
+  font-size: 14px;
 }
 
 .load-more {

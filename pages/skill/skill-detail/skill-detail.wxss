@@ -10,13 +10,13 @@
 }
 
 .skill-name text {
-  font-size: 50rpx;
+  font-size: 30px;
 }
 
 .skill-desc {
   color: #666;
   letter-spacing: 2px;
-  font-size: 30rpx;
+  font-size: 16px;
   margin-bottom: 40rpx;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .skill-title text {
-  font-size: 50rpx;
+  font-size: 30px;
 }
 
 .skill{

@@ -39,7 +39,6 @@
 .avatar-tit .name {
   width: 100%;
   position: absolute;
-  font-size: 40rpx;
   font-weight: bold;
   top: 20rpx;
   left: 20px;

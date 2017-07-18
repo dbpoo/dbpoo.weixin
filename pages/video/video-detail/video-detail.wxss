@@ -1,0 +1,18 @@
+.vdetail-tit {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.vdetail-con {
+  padding: 30rpx;
+}
+
+.vdetail-con video {
+  width: 100%;
+}
+
+.vdetail-info{
+  font-size:16px;
+  padding:0 30rpx;
+}

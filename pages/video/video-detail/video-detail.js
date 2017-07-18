@@ -12,7 +12,8 @@ Page({
   getVideoDetail: function (res) {
     this.setData({
       title: res.data.title,
-      video: res.data.video
+      video: res.data.video,
+      info: res.data.info
     })
   }
   

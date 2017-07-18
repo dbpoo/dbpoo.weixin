@@ -79,7 +79,7 @@ Page({
     })
   },
   onReachBottom: function () {
-    if (this.data.hasMore) return;
+    if (this.data.hasMore || this.data.searchHotShow) return;
     this.setData({
       hasMore: true
     })

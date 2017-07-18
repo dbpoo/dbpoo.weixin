@@ -2,7 +2,7 @@
 <import src="../template/item-template.wxml" />
 
 <view class="search" data-type="txt" catchtap="onSearch">
-  <input type="text" placeholder="请输入游戏角色" disabled="true"/>
+  <text class="word">请输入游戏角色</text>
 </view>
 <view class="container">
   <template is="swiper" data="{{swiperList}}"></template>

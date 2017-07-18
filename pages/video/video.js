@@ -28,6 +28,9 @@ Page({
       navcur: index
     })
     url = this.getUrl(index);
+    wx.showLoading({
+      title: app.globalData.LOADING,
+    })
     util.http(url + '?start=0' + '&count=' + this.data.count, this.getVideoList)
   },
   getUrl: function (index) {

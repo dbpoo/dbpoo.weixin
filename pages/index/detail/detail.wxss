@@ -1,7 +1,6 @@
 @import "../../../wxParse/wxParse.wxss";
 
 .detail-wrapper {
-  height: 100vh;
   background-color: #fff;
 }
 
@@ -17,12 +16,6 @@
 }
 
 .detail .title {
-  font-size: 36rpx;
+  font-size: 20px;
   font-weight: 700;
-}
-
-.detail .content {
-  color: #666;
-  letter-spacing: 2px;
-  font-size: 30rpx;
 }
