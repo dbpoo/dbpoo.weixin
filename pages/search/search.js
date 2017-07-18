@@ -52,14 +52,15 @@ Page({
     wx.navigateBack();
   },
   onBindBlur: function (evt) {
-    if (this.data.keywords) {
+    this.data.keywords = util.textFilter(evt.detail.value);
+    console.log(this.data.keywords)
+    if (!this.data.keywords) {
       this.setData({
         searchList: [],
         searchHotShow: true
       })
       return
     }
-    this.data.keywords = util.textFilter(evt.detail.value);
     wx.showLoading({
       title: app.globalData.LOADING,
     })
