@@ -17,6 +17,7 @@ App({
     search: 'https://static.ledo.com/api/post.js',
     game: 'https://static.ledo.com/api/game.js',
     search: 'https://static.ledo.com/api/search.js',
+    searchvideo: 'https://static.ledo.com/api/searchvideo.js',
     searchkey: 'https://static.ledo.com/api/searchkey.js',
     lastestList: 'https://static.ledo.com/api/videolastest.js',
     teachList: 'https://static.ledo.com/api/videoteach.js',

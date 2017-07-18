@@ -1,5 +1,10 @@
 @import "../template/search-template.wxss";
 @import "../template/item-template.wxss";
+@import "../template/video-template.wxss";
+
+.search-wrapper{
+  overflow:hidden;
+}
 
 .search-hot{
   padding: 30rpx 10rpx 0 20rpx;

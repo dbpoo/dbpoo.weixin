@@ -1,7 +1,8 @@
 <import src="../template/search-template.wxml" />
 <import src="../template/item-template.wxml" />
+<import src="../template/video-template.wxml" />
 
-<template is="search" data="{{placeholder,searchValue,isSearch}}"></template>
+<template is="search" data="{{placeholder,searchValue}}"></template>
 <view class="search-wrapper">
   <view class="search-hot" wx:if="{{searchHotShow}}">
     <view class="search-hot-t">热门游戏</view>
@@ -15,8 +16,11 @@
   </view>
   <view class="search-result" wx:if="{{!searchHotShow}}">
     <block wx:for="{{searchList}}" wx:key="searchId">
-      <view class="item-wrapper" bindtap="onTap" data-id="{{item.id}}">
-        <template is="postItem" data="{{...item}}"></template>
+      <view class="item-video" bindtap="onTapVideo" data-id="{{item.id}}" wx:if="{{searchType === 'video'}}">
+        <template is="videoItem" data="{{...item}}"></template>
+      </view>
+      <view class="item-txt" bindtap="onTapTxt" data-id="{{item.id}}" wx:else>
+        <template is="postItem" data="{{...item}}" ></template>
       </view>
     </block>
   </view>

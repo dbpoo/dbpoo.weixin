@@ -21,11 +21,11 @@
   background-color: #f6f6f6;
 }
 
-.item-wrapper {
+.video-wrapper {
   padding: 30rpx 0 0 0;
 }
 
-.item {
+.video {
   float: left;
   margin: 0 0 30rpx 30rpx;
 }
