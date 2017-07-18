@@ -1,9 +1,8 @@
 {
   "pages": [
+    "pages/video/video",
     "pages/index/index",
     "pages/index/detail/detail",
-    "pages/video/video",
-    "pages/video/video-list/video-list",
     "pages/video/video-detail/video-detail",
     "pages/skill/skill",
     "pages/skill/skill-list/skill-list",

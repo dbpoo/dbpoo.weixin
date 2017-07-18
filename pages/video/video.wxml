@@ -1,12 +1,24 @@
-<view class="vbg">
-  <block wx:for="{{videoList}}" wx:key="videoId">
-    <view class="video-wrapper" bindtap="onTap">
-      <view class="video-list">
-        <image src="{{item.image}}" mode="widthFix"></image>
-        <view class="video-info">
-          <text>{{item.title}}</text>
-        </view>
+<import src="../template/swiper-template.wxml" />
+<import src="../template/video-template.wxml" />
+
+<view class="search" data-type="txt" catchtap="onSearch">
+  <input type="video" placeholder="请输入游戏角色" disabled="true"/>
+</view>
+<view class="container">
+  <template is="swiper" data="{{swiperList}}"></template>
+  <view class="topnav">
+    <text data-id='0' catchtap="onNav" class="{{navcur==0?'cur':''}}">最新</text>
+    <text data-id='1' catchtap="onNav" class="{{navcur==1?'cur':''}}">教学</text>
+    <text data-id='2' catchtap="onNav" class="{{navcur==2?'cur':''}}">排行</text>
+  </view>
+  <view class="item-wrapper">
+    <block wx:for="{{videoList}}" wx:key="videoId">
+      <view class="item" catchtap="onTap" data-id="{{item.id}}">
+        <template is="videoItem" data="{{...item}}"></template>
       </view>
-    </view>
-  </block>
+    </block>
+  </view>
+</view>
+<view class="load-more" wx:if="{{hasMore}}">
+  <text class="{{isComplete?'complele': ''}}">{{loadTips}}</text>
 </view>

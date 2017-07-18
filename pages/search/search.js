@@ -11,11 +11,12 @@ Page({
     hasMore: false,
     isSearch: false,
     searchHotShow: true,
-    placeholder: '请输入游戏角色'
+    placeholder: '请输入游戏角色',
+    searchType: ''
   },
 
   onLoad: function (options) {
-    var type = options.type;
+    this.data.searchType = options.type;
     util.http(app.indexAPI.searchkey, this.getSearchKey);
   },
   getSearchKey: function (res) {
@@ -29,7 +30,7 @@ Page({
     this.setData({
       searchValue: this.data.keywords
     });
-    util.http(app.indexAPI.search + '?&keywords=' + this.data.keywords + 'start=0&count=' + this.data.count, this.getSearchList)
+    util.http(app.indexAPI.search + '?type=' + this.data.searchType + '&keywords=' + this.data.keywords + 'start=0&count=' + this.data.count, this.getSearchList)
   },
   onBindFocus: function (evt) {
     this.setData({
@@ -48,7 +49,7 @@ Page({
     wx.showLoading({
       title: app.globalData.LOADING,
     })
-    util.http(app.indexAPI.search + '?&keywords=' + this.data.keywords + 'start=0&count=' + this.data.count, this.getSearchList)
+    util.http(app.indexAPI.search + '?type=' + this.data.searchType + '&keywords=' + this.data.keywords + 'start=0&count=' + this.data.count, this.getSearchList)
   },
   getSearchList: function (res) {
     wx.hideLoading();
@@ -68,7 +69,7 @@ Page({
     if (this.data.isComplete) return;
     this.data.start += this.data.count;
     if (this.data.start < this.data.total) {
-      util.http(app.indexAPI.search + '?keywords=' + this.data.keywords + 'start=' + this.data.start + '&count=' + this.data.count, this.morePostList);
+      util.http(app.indexAPI.search + '?type=' + this.data.searchType + '&keywords=' + this.data.keywords + 'start=' + this.data.start + '&count=' + this.data.count, this.morePostList);
     } else {
       this.setData({
         isComplete: true,
