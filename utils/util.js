@@ -26,7 +26,7 @@ function textFilter(str) {
   for (var i = 0; i < str.length; i++) {
     tempStr += str.substr(i, 1).replace(pattern, '');
   }
-  return tempStr;  
+  return tempStr;
 }
 
 module.exports = {

@@ -47,7 +47,7 @@ Page({
     }
   },
   getIndexData: function () {
-    util.http(app.indexAPI.swiper, this.getSwiperList);
+    util.http(app.indexAPI.swipervideo, this.getSwiperList);
     util.http(app.indexAPI.lastestList + '?start=' + this.data.start + '&count=' + this.data.count, this.getVideoList);
   },
   getSwiperList: function (res) {

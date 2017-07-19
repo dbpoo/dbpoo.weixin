@@ -1,7 +1,7 @@
 <template name="search">
   <view class="search">
     <input type="text" placeholder="{{placeholder}}" 
-  placeholder-class="placeholder" value='{{searchValue}}' bindblur="onBindBlur"
+  placeholder-class="placeholder" value='{{searchValue}}' bindinput="onBindInput"
   bindconfirm="onBindBlur" focus/>
     <text catchtap="onCancel" class="cancelBtn">返回</text>
   </view>

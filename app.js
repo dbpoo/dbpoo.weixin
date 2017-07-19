@@ -7,6 +7,7 @@ App({
   },
   indexAPI: {
     swiper: 'https://static.ledo.com/api/swiper.js',
+    swipervideo: 'https://static.ledo.com/api/swipervideo.js',
     hot: 'https://static.ledo.com/api/hot.js',
     news: 'https://static.ledo.com/api/news.js',
     announce: 'https://static.ledo.com/api/announce.js',

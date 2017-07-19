@@ -13,7 +13,8 @@ Page({
     searchHotShow: true,
     placeholder: '请输入游戏角色',
     searchType: 'txt',
-    searchUrl: ''
+    searchUrl: '',
+    timer: ''
   },
 
   onLoad: function (options) {
@@ -51,19 +52,26 @@ Page({
   onCancel: function (evt) {
     wx.navigateBack();
   },
-  onBindBlur: function (evt) {
+  onBindInput: function (evt) {
+    var _this = this;
     this.data.keywords = util.textFilter(evt.detail.value);
     if (!this.data.keywords) {
       this.setData({
         searchList: [],
         searchHotShow: true
       })
+      clearTimeout(this.data.timer)
       return
     }
-    wx.showLoading({
-      title: app.globalData.LOADING,
-    })
-    util.http(this.data.searchUrl + '?type=' + this.data.searchType + '&keywords=' + this.data.keywords + '&start=0&count=' + this.data.count, this.getSearchList)
+    if (this.data.timer) {
+      clearTimeout(this.data.timer)
+    }
+    this.data.timer = setTimeout(() => {
+      wx.showLoading({
+        title: app.globalData.LOADING,
+      })
+      util.http(_this.data.searchUrl + '?type=' + _this.data.searchType + '&keywords=' + _this.data.keywords + '&start=0&count=' + _this.data.count, _this.getSearchList)
+    }, 500)
   },
   getSearchList: function (res) {
     wx.hideLoading();
