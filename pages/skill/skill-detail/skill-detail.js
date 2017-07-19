@@ -13,9 +13,7 @@ Page({
     this.setData({
       name: res.data.name,
       desc: res.data.desc,
-      skill1: res.data.skill1,
-      skill2: res.data.skill2,
-      skill3: res.data.skill3
+      skill: res.data.skill
     })
   }
 })

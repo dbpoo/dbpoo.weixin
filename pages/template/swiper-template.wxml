@@ -1,5 +1,5 @@
 <template name="swiper">
-  <swiper indicator-dots autoplay interval="3000" duration="500" circular class="swiper-wrapper" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#ffffff">
+  <swiper indicator-dots autoplay interval="3000" duration="500" circular class="swiper-wrapper" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#0097e0">
     <block wx:for="{{swiperList}}" wx:key="swiperId">
       <swiper-item catchtap="onTap" data-id="{{item.id}}">
         <image src="{{item.picUrl}}" style="width:100%"></image>

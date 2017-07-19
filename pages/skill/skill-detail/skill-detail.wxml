@@ -11,49 +11,6 @@
   </view>
   <view class="horizon"></view>
   <view class="skill-info">
-    <view class="skill" wx:if="{{skill1}}">
-      <view class="skill-tit">普通技</view>
-      <view class="skill-con">
-        <block wx:for="{{skill1}}" wx:key="skKey1">
-          <view class="skill-table">
-            <text>{{item.skill_name}}</text>
-            <text>{{item.skill_button}}</text>
-          </view>
-        </block>
-      </view>
-    </view>
-    <view class="skill" wx:if="{{skill2}}">
-      <view class="skill-tit">特殊技</view>
-      <view class="skill-con">
-        <block wx:for="{{skill2}}" wx:key="skKey2">
-          <view class="skill-table">
-            <text>{{item.skill_name}}</text>
-            <text>{{item.skill_button}}</text>
-          </view>
-        </block>
-      </view>
-    </view>
-    <view class="skill" wx:if="{{skill3}}">
-      <view class="skill-tit">必杀技</view>
-      <view class="skill-con">
-        <block wx:for="{{skill3}}" wx:key="skKey3">
-          <view class="skill-table">
-            <text>{{item.skill_name}}</text>
-            <text>{{item.skill_button}}</text>
-          </view>
-        </block>
-      </view>
-    </view>
-    <view class="skill" wx:if="{{skill4}}">
-      <view class="skill-tit">超必杀技</view>
-      <view class="skill-con">
-        <block wx:for="{{skill4}}" wx:key="skKey4">
-          <view class="skill-table">
-            <text>{{item.skill_name}}</text>
-            <text>{{item.skill_button}}</text>
-          </view>
-        </block>
-      </view>
-    </view>
+    <image src="{{skill}}" mode="widthFix"></image>
   </view>
 </view>

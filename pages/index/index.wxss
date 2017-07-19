@@ -5,18 +5,18 @@
 .topnav {
   height: 40px;
   line-height: 40px;
-  background-color: #0084e0;
   display: flex;
 }
 
 .topnav text {
   width: 100%;
   font-size: 14px;
-  color: #fff;
+  color: #000;
   text-align: center;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .topnav .cur {
-  color: #333;
-  background-color: #f6f6f6;
+  color: #0097e0;
+  border-bottom: 1px solid #0097e0;
 }

@@ -4,7 +4,7 @@
       <view class="skill-list">
         <image src="{{item.image}}" mode="scaleToFill"></image>
         <view class="skill-info" catchtap="onToggle" data-id="{{index}}">
-          <text>{{item.title}}</text>
+          <view>{{item.title}} <image src="../../images/icon/icon_arrow.png"></image></view>
         </view>
         <view class="sub-skill sub-skill" wx:if="{{type === index}}">
           <view class="sub-skill-block" catchtap="onTap" data-id="{{itemSub.subID}}" wx:for="{{item.sublink}}" wx:for-index="idx" wx:for-item="itemSub"  wx:key="subskillId">
@@ -17,7 +17,7 @@
       <view class="skill-list">
         <image src="{{item.image}}" mode="scaleToFill"></image>
         <view class="skill-info" data-id="{{item.id}}" catchtap="onTap">
-          <text>{{item.title}}</text>
+          <view>{{item.title}}</view>
         </view>
       </view>
     </view>
