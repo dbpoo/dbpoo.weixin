@@ -6,12 +6,12 @@
         <view class="skill-info" catchtap="onToggle" data-id="{{index}}">
           <view>{{item.title}} <image src="../../images/icon/icon_arrow.png"></image></view>
         </view>
-        <view class="sub-skill sub-skill" wx:if="{{type === index}}">
+      </view>
+      <view class="sub-skill sub-skill" wx:if="{{type === index}}">
           <view class="sub-skill-block" catchtap="onTap" data-id="{{itemSub.subID}}" wx:for="{{item.sublink}}" wx:for-index="idx" wx:for-item="itemSub"  wx:key="subskillId">
             {{itemSub.subTitle}}
           </view>
         </view>
-      </view>
     </view>
     <view class="skill-wrapper"  wx:if="{{!item.sublink.length}}">
       <view class="skill-list">

@@ -4,6 +4,7 @@
 }
 
 .skill-list {
+  height: 200rpx;
   position: relative;
 }
 
