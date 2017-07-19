@@ -2,15 +2,18 @@
 
 <view class="skill-wrapper">
   <view class="avatar-wrapper">
-    <view class="avatar-tit">
+    <view class="avatar-img">
       <image src="{{avatarImage}}" mode="widthFix"></image>
+    </view>
+    <view class="avatar-tit">
       <view class="name">{{avatarName}}</view>
       <view class="info">
         <text>{{avatarInfo}}</text>
-        <text class="toggle" catchtap="toggle" wx:if="{{!showMore}}">展开</text>
-        <text class="toggle" catchtap="toggle" wx:if="{{showMore}}">收起</text>
       </view>
     </view>
+    <view class="toggle" catchtap="toggle" wx:if="{{!showMore}}">展开</view>
+    <view class="toggle" catchtap="toggle" wx:if="{{showMore}}">收起</view>
+    <view class="line"></view>
     <view class="avatar-list">
       <block wx:for="{{avatarList}}" wx:key="avatarId">
         <view class="avatar-wrap" data-id="{{item.id}}">

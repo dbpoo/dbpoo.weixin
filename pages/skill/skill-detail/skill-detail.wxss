@@ -4,9 +4,7 @@
 
 .skill-name {
   height: 50rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 20px;
 }
 
 .skill-name text {
@@ -14,7 +12,7 @@
 }
 
 .skill-desc {
-  color: #666;
+  color: #a9a9a9;
   letter-spacing: 2px;
   font-size: 16px;
   margin-bottom: 40rpx;
@@ -23,12 +21,13 @@
 .skill-title {
   height: 50rpx;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding:30rpx 0;
 }
 
 .skill-title text {
-  font-size: 30px;
+  font-size: 20px;
+  border-left:4px solid #0095e0;
+  padding-left:10px;
 }
 
 .skill{

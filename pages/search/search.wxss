@@ -12,19 +12,19 @@
 
 .search-hot-t{
   font-size:14px;
-  color:#acacae;
-  margin: 20rpx 0;
+  color:#888888;
+  margin: 20rpx 5px;
 }
 
 .search-hot-keys text{
   padding:10rpx 15rpx;
   background-color:#fff;
-  border:1px solid #ccc;
+  border:1px solid #0097e0;
   border-radius: 10rpx;
   margin:10rpx;
   display:inline-block;
   font-size:14px;
-  color:#333;
+  color:#0097e0;
 }
 
 .search-result-video{

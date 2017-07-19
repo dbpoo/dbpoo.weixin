@@ -3,22 +3,22 @@
 @import "../template/video-template.wxss";
 
 .topnav {
-  height: 40px;
-  line-height: 40px;
-  background-color: #0084e0;
+  height: 50px;
+  line-height: 50px;
   display: flex;
 }
 
 .topnav text {
   width: 100%;
-  font-size: 14px;
-  color: #fff;
+  font-size: 16px;
+  color: #333;
+  background-color: #f6f6f6;
   text-align: center;
 }
 
 .topnav .cur {
-  color: #333;
-  background-color: #f6f6f6;
+  color: #fff;
+  background-color: #0084e0;
 }
 
 .video-wrapper {

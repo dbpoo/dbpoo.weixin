@@ -1,6 +1,6 @@
 .sbg {
   height: 100vh;
-  background-color: #000;
+  background-color: #222222;
 }
 
 .skill-list {

@@ -3,17 +3,17 @@
 @import "../template/item-template.wxss";
 
 .topnav {
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
   display: flex;
 }
 
 .topnav text {
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
   text-align: center;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
 
 .topnav .cur {

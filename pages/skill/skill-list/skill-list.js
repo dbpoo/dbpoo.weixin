@@ -21,7 +21,7 @@ Page({
       avatarName: res.data.avatarName,
       avatarImage: res.data.avatarImage,
       avatarInfoAll: res.data.avatarInfo,
-      avatarInfo: that.curstr(res.data.avatarInfo, 200),
+      avatarInfo: that.curstr(res.data.avatarInfo, 100),
       avatarList: res.data.avatarData
     })
   },
@@ -39,7 +39,7 @@ Page({
     if (tempShow) {
       tempStr = this.data.avatarInfoAll;
     } else {
-      tempStr = this.curstr(this.data.avatarInfoAll, 200)
+      tempStr = this.curstr(this.data.avatarInfoAll, 100)
     }
     this.setData({
       showMore: tempShow,

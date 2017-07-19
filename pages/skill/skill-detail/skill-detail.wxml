@@ -2,15 +2,16 @@
   <view class="skill-name">
     <text>{{name}}</text>
   </view>
-  <view class="horizon"></view>
-  <view class="skill-desc">
-    {{desc}}
-  </view>
   <view class="skill-title">
-    <text>技能表</text>
+    <text>出招表</text>
   </view>
-  <view class="horizon"></view>
   <view class="skill-info">
     <image src="{{skill}}" mode="widthFix"></image>
+  </view>
+  <view class="skill-title">
+    <text>人物背景</text>
+  </view>
+  <view class="skill-desc">
+    {{desc}}
   </view>
 </view>
