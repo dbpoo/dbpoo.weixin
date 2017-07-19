@@ -1,8 +1,11 @@
 <template name="search">
   <view class="search">
-    <input type="text" placeholder="{{placeholder}}" 
-  placeholder-class="placeholder" value='{{searchValue}}' bindinput="onBindInput"
+    <view class="search-input">
+      <input type="text" placeholder="{{placeholder}}" 
+  placeholder-class="placeholder" value="{{searchValue}}" bindinput="onBindInput"
   bindconfirm="onBindBlur" focus/>
+      <view class="close" wx:if="{{isClose}}" catchtap="onClose"><image src="../../images/icon/xx.png"></image></view>
+  </view>
     <text catchtap="onCancel" class="cancelBtn">返回</text>
   </view>
 </template>

@@ -14,7 +14,8 @@ Page({
     placeholder: '请输入游戏角色',
     searchType: 'txt',
     searchUrl: '',
-    timer: ''
+    timer: '',
+    isClose: false
   },
 
   onLoad: function (options) {
@@ -58,10 +59,15 @@ Page({
     if (!this.data.keywords) {
       this.setData({
         searchList: [],
-        searchHotShow: true
+        searchHotShow: true,
+        isClose: false
       })
       clearTimeout(this.data.timer)
       return
+    } else {
+      this.setData({
+        isClose: true
+      })
     }
     if (this.data.timer) {
       clearTimeout(this.data.timer)
@@ -72,6 +78,14 @@ Page({
       })
       util.http(_this.data.searchUrl + '?type=' + _this.data.searchType + '&keywords=' + _this.data.keywords + '&start=0&count=' + _this.data.count, _this.getSearchList)
     }, 500)
+  },
+  onClose: function(){
+    this.setData({
+      searchList: [],
+      searchHotShow: true,
+      isClose: false,
+      searchValue: ''
+    })
   },
   getSearchList: function (res) {
     wx.hideLoading();

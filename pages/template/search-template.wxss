@@ -16,13 +16,35 @@
   color:#808080;
 }
 
+.search .search-input{
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 0 10px;
+  position: relative;
+}
+
+.search .search-input .close{
+  width:30px;
+  height:30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search .search-input .close image{
+  width:10px;
+  height:10px;
+}
+
 .search input {
   width: 100%;
   height: 30px;
   line-height: 30px;
-  border-radius: 10px;
-  background-color: #fff;
-  padding: 0 10px;
 }
 
 .search .cancelBtn {
