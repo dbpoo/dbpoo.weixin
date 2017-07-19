@@ -1,13 +1,11 @@
 <template name="videoItem">
-  <view class="video">
-    <view class="video-img">
-      <image src="{{image}}" class="video-bgimg" mode="scaleToFill"></image>
-      <view class="video-mask">
-        <image src="/images/icon/icon_play.png"></image>
-      </view>
+  <view class="video-img">
+    <image src="{{image}}" class="video-bgimg" mode="scaleToFill"></image>
+    <view class="video-mask">
+      <image src="/images/icon/icon_play.png"></image>
     </view>
-    <view class="video-title">
-      {{title}}
-    </view>
+  </view>
+  <view class="video-title">
+    {{title}}
   </view>
 </template>

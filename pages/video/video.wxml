@@ -15,7 +15,7 @@
   </view>
   <view class="video-wrapper">
     <block wx:for="{{videoList}}" wx:key="videoId">
-      <view class="item" catchtap="onTap" data-id="{{item.id}}">
+      <view class="video" catchtap="onTap" data-id="{{item.id}}">
         <template is="videoItem" data="{{...item}}"></template>
       </view>
     </block>

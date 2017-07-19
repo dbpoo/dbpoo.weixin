@@ -19,10 +19,10 @@
       为您找到这些
     </view>
     <block wx:for="{{searchList}}" wx:key="searchId">
-      <view class="item-video" bindtap="onTapVideo" data-id="{{item.id}}" wx:if="{{searchType === 'video'}}">
+      <view class="video" bindtap="onTapVideo" data-id="{{item.id}}" wx:if="{{searchType === 'video'}}">
         <template is="videoItem" data="{{...item}}"></template>
       </view>
-      <view class="item-txt" bindtap="onTapTxt" data-id="{{item.id}}" wx:else>
+      <view class="item" bindtap="onTapTxt" data-id="{{item.id}}" wx:else>
         <template is="postItem" data="{{...item}}" ></template>
       </view>
     </block>

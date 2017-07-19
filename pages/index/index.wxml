@@ -14,11 +14,13 @@
     <text data-id='2' catchtap="onNav" class="{{navcur==2?'cur':''}}">公告</text>
     <text data-id='3' catchtap="onNav" class="{{navcur==3?'cur':''}}">教学</text>
   </view>
-  <block wx:for="{{postList}}" wx:key="postId">
-    <view class="item-txt" catchtap="onTap" data-id="{{item.id}}">
-      <template is="postItem" data="{{...item}}"></template>
-    </view>
-  </block>
+  <view class="item-wrapper">
+    <block wx:for="{{postList}}" wx:key="postId">
+      <view class="item" catchtap="onTap" data-id="{{item.id}}">
+        <template is="postItem" data="{{...item}}"></template>
+      </view>
+    </block>
+  </view>
 </view>
 <view class="load-more" wx:if="{{hasMore}}">
   <text class="{{isComplete?'complele': ''}}">{{loadTips}}</text>

@@ -8,7 +8,6 @@
 
 .search-tit {
   line-height: 50px;
-  margin: 0 30rpx;
   border-bottom: 1px solid #ccc;
   color: #888;
 }
@@ -34,6 +33,14 @@
   color: #0097e0;
 }
 
+.search-result-txt {
+  padding: 0 30rpx;
+}
+
 .search-result-video {
-  padding: 30rpx 0 0 10rpx;
+  padding: 0 0 0 10rpx;
+}
+
+.search-result-video .search-tit{
+  margin-bottom: 30rpx;
 }

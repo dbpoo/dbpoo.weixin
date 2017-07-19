@@ -20,3 +20,7 @@
   color: #0097e0;
   border-bottom: 1px solid #0097e0;
 }
+
+.item-wrapper{
+  padding:0 30rpx;
+}
