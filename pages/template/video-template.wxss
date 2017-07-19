@@ -1,7 +1,7 @@
 .video {
   width: 340rpx;
   float: left;
-  margin: 20px 0 0 20rpx;
+  margin: 0 0 20px 20rpx;
 }
 
 .video-img {

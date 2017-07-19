@@ -1,6 +1,7 @@
 <template name="search">
   <view class="search">
     <view class="search-input">
+      <image src="../../images/icon/icon_search.png" class="iconsearch"></image>
       <input type="text" placeholder="{{placeholder}}" 
   placeholder-class="placeholder" value="{{searchValue}}" bindinput="onBindInput"
   bindconfirm="onBindBlur" focus/>

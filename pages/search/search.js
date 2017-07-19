@@ -46,6 +46,7 @@ Page({
   searchkey: function (evt) {
     this.data.keywords = util.textFilter(evt.currentTarget.dataset.key);
     this.setData({
+      isClose: true,
       searchValue: this.data.keywords
     });
     util.http(this.data.searchUrl + '?type=' + this.data.searchType + '&keywords=' + this.data.keywords + '&start=0&count=' + this.data.count, this.getSearchList)

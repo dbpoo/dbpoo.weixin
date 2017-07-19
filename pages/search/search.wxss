@@ -2,31 +2,38 @@
 @import "../template/item-template.wxss";
 @import "../template/video-template.wxss";
 
-.search-wrapper{
-  overflow:hidden;
+.search-wrapper {
+  overflow: hidden;
 }
 
-.search-hot{
+.search-tit {
+  line-height: 50px;
+  margin: 0 30rpx;
+  border-bottom: 1px solid #ccc;
+  color: #888;
+}
+
+.search-hot {
   padding: 30rpx 10rpx 0 20rpx;
 }
 
-.search-hot-t{
-  font-size:14px;
-  color:#888888;
+.search-hot-t {
+  font-size: 14px;
+  color: #888;
   margin: 20rpx 5px;
 }
 
-.search-hot-keys text{
-  padding:10rpx 15rpx;
-  background-color:#fff;
-  border:1px solid #0097e0;
+.search-hot-keys text {
+  padding: 10rpx 15rpx;
+  background-color: #fff;
+  border: 1px solid #0097e0;
   border-radius: 10rpx;
-  margin:10rpx;
-  display:inline-block;
-  font-size:14px;
-  color:#0097e0;
+  margin: 10rpx;
+  display: inline-block;
+  font-size: 14px;
+  color: #0097e0;
 }
 
-.search-result-video{
-  padding: 0 0 0 10rpx;
+.search-result-video {
+  padding: 30rpx 0 0 10rpx;
 }

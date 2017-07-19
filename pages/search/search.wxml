@@ -15,6 +15,9 @@
     </view>
   </view>
   <view class="search-result {{searchType === 'video'?'search-result-video':'search-result-txt'}}" wx:if="{{!searchHotShow}}">
+    <view class="search-tit">
+      为您找到这些
+    </view>
     <block wx:for="{{searchList}}" wx:key="searchId">
       <view class="item-video" bindtap="onTapVideo" data-id="{{item.id}}" wx:if="{{searchType === 'video'}}">
         <template is="videoItem" data="{{...item}}"></template>

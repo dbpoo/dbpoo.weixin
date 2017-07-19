@@ -2,7 +2,9 @@
 <import src="../template/video-template.wxml" />
 
 <view class="search" data-type="video" catchtap="onSearch">
-  <text class="word">请输入游戏角色</text>
+  <view class="word">
+    <view class="word-input"><image src="../../images/icon/icon_search.png"></image> 请输入游戏角色</view>
+  </view>
 </view>
 <view class="container">
   <template is="swiper" data="{{swiperList}}"></template>
