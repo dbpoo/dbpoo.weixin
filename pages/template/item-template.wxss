@@ -6,20 +6,24 @@
   display:flex;
   justify-content: space-between;
   border-bottom:1rpx solid #e5e5e5;
-  font-size: 14px;
+  font-size: 16px;
 }
 .item image{
   width: 130px;
-  margin-right:20rpx;
 }
 .item-info{
   width:100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-right:20rpx;
 }
 .item-info .time{
-  text-align: right;
   font-size:12px;
   color:#bbb;
+}
+
+.item-info .cate{
+  color:#0097e0;
+  font-weight: bold;
 }

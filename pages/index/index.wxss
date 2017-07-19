@@ -13,12 +13,12 @@
   font-size: 16px;
   color: #000;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #eee;
 }
 
 .topnav .cur {
   color: #0097e0;
-  border-bottom: 1px solid #0097e0;
+  border-bottom: 2px solid #0097e0;
 }
 
 .item-wrapper{

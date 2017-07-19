@@ -22,3 +22,8 @@ page {
   height: 10px;
   background-color: #efeff4;
 }
+
+.fontline{
+  color:#eeeeee;
+  padding: 0 5px;
+}

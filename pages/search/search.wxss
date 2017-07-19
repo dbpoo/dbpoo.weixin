@@ -13,7 +13,7 @@
 }
 
 .search-hot {
-  padding: 30rpx 10rpx 0 20rpx;
+  padding: 0 10rpx 0 20rpx;
 }
 
 .search-hot-t {

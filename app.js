@@ -8,8 +8,8 @@ App({
   indexAPI: {
     swiper: 'https://static.ledo.com/api/swiper.js',
     swipervideo: 'https://static.ledo.com/api/swipervideo.js',
-    hot: 'https://static.ledo.com/api/hot.js',
-    news: 'https://static.ledo.com/api/news.js',
+    hot: 'https://static.ledo.com/api/hot.js?v',
+    news: 'https://static.ledo.com/api/news.js?v',
     announce: 'https://static.ledo.com/api/announce.js',
     study: 'https://static.ledo.com/api/study.js',
     detail: 'https://static.ledo.com/api/detail.js',

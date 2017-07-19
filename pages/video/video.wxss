@@ -22,5 +22,5 @@
 }
 
 .video-wrapper {
-  padding: 30rpx 0 0 10rpx;
+  padding: 50rpx 0 0 10rpx;
 }
