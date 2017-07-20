@@ -4,15 +4,18 @@ var app = getApp();
 Page({
   data: {
     currutTab: 0,
-    showMore: false
+    showMore: false,
+    shareId:''
   },
   onLoad: function (options) {
     var id = options.id;
+    this.setData({
+      shareId: id
+    })
     wx.showLoading({
       title: app.globalData.LOADING,
     })
-    util.http(app.indexAPI.avatar + '?id=' + id, this.getAvatarList)
-
+    util.http(app.indexAPI.avatar + '?id=' + id, this.getAvatarList);
   },
   getAvatarList: function (res) {
     var that = this;
@@ -65,5 +68,13 @@ Page({
       }
     }
     return strre + "..."
+  },
+  onShareAppMessage: function (res) {
+    console.log(this.data.shareId)
+    return {
+      title: this.data.avatarName,
+      desc: this.data.avatarInfoAll,
+      path: '/pages/skill/skill-list/skill-list?id=' + this.data.shareId,
+    }
   }
 })

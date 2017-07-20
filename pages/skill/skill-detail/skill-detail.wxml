@@ -1,6 +1,7 @@
 <view class="skill-wrapper">
   <view class="skill-name">
     <text>{{name}}</text>
+    <button class="share" open-type="share">分享</button>
   </view>
   <view class="skill-title">
     <text>出招表</text>

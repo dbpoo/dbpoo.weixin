@@ -6,7 +6,7 @@
       <image src="{{avatarImage}}" mode="widthFix"></image>
     </view>
     <view class="avatar-tit">
-      <view class="name">{{avatarName}}</view>
+      <view class="title"><text class="name">{{avatarName}}</text> <button class="share" open-type="share">分享</button></view>
       <view class="info">
         <text>{{avatarInfo}}</text>
       </view>

@@ -3,12 +3,24 @@
 }
 
 .skill-name {
-  height: 50rpx;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .skill-name text {
   font-size: 30px;
+}
+
+.skill-name .share {
+  display: inline-block;
+  line-height: 26px;
+  margin-left: 10px;
+  background-color: #06d501;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 8px;
+  font-size: 14px;
 }
 
 .skill-desc {

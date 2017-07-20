@@ -25,18 +25,37 @@
   display: inline-block;
 }
 
-.avatar-img image{
-  width:100%;
+.avatar-img image {
+  width: 100%;
 }
 
 .avatar-tit {
   padding: 30rpx;
 }
 
-
-.avatar-tit .name {
+.avatar-tit .title {
   width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.avatar-tit .title .name {
   font-weight: bold;
+  font-size: 20px;
+  border-left: 4px solid #0095e0;
+  padding-left: 10px;
+}
+
+.avatar-tit .title .share {
+  display: inline-block;
+  line-height: 26px;
+  margin-left: 10px;
+  background-color: #06d501;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 8px;
+  font-size: 14px;
 }
 
 .avatar-tit .info {
@@ -46,9 +65,9 @@
 
 .toggle {
   height: 40px;
-  line-height:40px;
+  line-height: 40px;
   text-align: center;
-  color:#0097e0;
+  color: #0097e0;
   background-color: #f8f8f8;
 }
 
