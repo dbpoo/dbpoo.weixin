@@ -1,6 +1,6 @@
 <template name="postItem">
   <view class="item-info">
-    <text class="title"><text class="cate">{{cate}}</text><text class="fontline">|</text>{{title}}</text>
+    <text class="title"><text class="cate" wx:if="{{cate.length > 0}}">{{cate}}</text><text class="fontline" wx:if="{{cate.length > 0}}">|</text>{{title}}</text>
     <text class="time">{{time}}</text>
   </view>
   <image src="{{image}}" mode="widthFix" wx:if="{{image}}"></image>

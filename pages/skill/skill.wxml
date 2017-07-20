@@ -4,7 +4,7 @@
       <view class="skill-list">
         <image src="{{item.image}}" mode="scaleToFill"></image>
         <view class="skill-info" catchtap="onToggle" data-id="{{index}}">
-          <view>{{item.title}} <image src="../../images/icon/icon_arrow.png"></image></view>
+          <view>{{item.title}} <image src="../../images/icon/icon_arrow.png" wx:if="{{!(type === index)}}"></image><image src="../../images/icon/icon_arrow_on.png" wx:if="{{type === index}}"></image></view>
         </view>
       </view>
       <view class="sub-skill sub-skill" wx:if="{{type === index}}">
