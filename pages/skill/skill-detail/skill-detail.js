@@ -10,7 +10,7 @@ Page({
     this.setData({
       shareId: id
     })
-    util.http(app.indexAPI.skill + '?id=' + id, this.getSkillDetail)
+    util.http(app.indexAPI.skill + '?id=' + id, this.getSkillDetail, this)
   },
   getSkillDetail: function (res) {
     this.setData({

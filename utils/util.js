@@ -1,23 +1,45 @@
 var app = getApp();
 
-function http(url, callback) {
-  wx.request({
-    url: url,
-    method: 'GET',
-    header: {
-      "Content-Type": "json"
-    },
-    success: function (res) {
-      if (res.data.code === app.globalData.ERR_OK) {
-        callback(res.data);
-      } else {
-        console.log('no data');
+function http(url, callback, that, isCache) {
+  var isOne = true;
+  var cacheFn = function() {
+    wx.request({
+      url: url,
+      method: 'GET',
+      header: {
+        "Content-Type": "json"
+      },
+      success: function (res) {
+        if (res.data.code === app.globalData.ERR_OK) {
+          callback.call(that, res.data);
+          if (!that.data.isNet) {
+            that.setData({
+              isNet: true
+            })
+          }
+        } else {
+          if (!isOne) {
+            return
+          }
+
+          wx.hideLoading();
+          that.setData({
+            isError: true,
+            errorTxt: '加载失败',
+            isNet: false
+          })
+
+          that.reloadFn = http(url, callback, that, 1);
+          isOne = false;
+        }
+      },
+      fail: function () {
+        alert('服务器错误！')
       }
-    },
-    fail: function (error) {
-      console.log(error)
-    }
-  })
+    })
+  }
+
+  return isCache ? cacheFn : cacheFn();
 }
 
 function textFilter(str) {

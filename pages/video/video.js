@@ -31,7 +31,7 @@ Page({
     wx.showLoading({
       title: app.globalData.LOADING,
     })
-    util.http(url + '?start=0' + '&count=' + this.data.count, this.getVideoList)
+    util.http(url + '?start=0' + '&count=' + this.data.count, this.getVideoList, this)
   },
   getUrl: function (index) {
     switch (index) {
@@ -47,8 +47,8 @@ Page({
     }
   },
   getIndexData: function () {
-    util.http(app.indexAPI.swipervideo, this.getSwiperList);
-    util.http(app.indexAPI.lastestList + '?start=' + this.data.start + '&count=' + this.data.count, this.getVideoList);
+    util.http(app.indexAPI.swipervideo, this.getSwiperList, this);
+    util.http(app.indexAPI.lastestList + '?start=' + this.data.start + '&count=' + this.data.count, this.getVideoList, this);
   },
   getSwiperList: function (res) {
     if (!res) return;
@@ -94,7 +94,7 @@ Page({
     if (this.data.isComplete) return;
     this.data.start += this.data.count;
     if (this.data.start < this.data.total) {
-      util.http(url + '?start=' + this.data.start + '&count=' + this.data.count, this.morePostList);
+      util.http(url + '?start=' + this.data.start + '&count=' + this.data.count, this.morePostList, this);
     } else {
       this.setData({
         isComplete: true,

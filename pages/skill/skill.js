@@ -9,7 +9,7 @@ Page({
     wx.showLoading({
       title: app.globalData.LOADING,
     })
-    util.http(app.indexAPI.game, this.getGameList)
+    util.http(app.indexAPI.game, this.getGameList, this)
   },
   getGameList: function (res, index) {
     wx.hideLoading();

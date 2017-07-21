@@ -1,9 +1,13 @@
 <import src="../template/search-template.wxml" />
 <import src="../template/item-template.wxml" />
 <import src="../template/video-template.wxml" />
+<import src="../template/error-template.wxml" />
 
 <template is="search" data="{{placeholder,searchValue,isClose}}"></template>
-<view class="search-wrapper">
+<block wx:if="{{isError}}">
+  <template is="error" data="{{errorTxt,isNet}}"></template>
+</block>
+<view class="search-wrapper" wx:if="{{isNet}}">
   <view class="search-hot" wx:if="{{searchHotShow}}">
     <view class="search-hot-t">热门游戏</view>
     <view class="search-hot-keys">
@@ -23,7 +27,7 @@
         <template is="videoItem" data="{{...item}}"></template>
       </view>
       <view class="item" bindtap="onTapTxt" data-id="{{item.id}}" wx:else>
-        <template is="postItem" data="{{...item}}" ></template>
+        <template is="postItem" data="{{...item}}"></template>
       </view>
     </block>
   </view>

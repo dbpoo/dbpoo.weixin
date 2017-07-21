@@ -7,7 +7,7 @@ Page({
   },
   onLoad: function (options) {
     var id = options.id;
-    util.http(app.indexAPI.video + '?id=' + id, this.getVideoDetail)
+    util.http(app.indexAPI.video + '?id=' + id, this.getVideoDetail, this)
   },
   getVideoDetail: function (res) {
     this.setData({

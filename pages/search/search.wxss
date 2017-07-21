@@ -1,6 +1,7 @@
 @import "../template/search-template.wxss";
 @import "../template/item-template.wxss";
 @import "../template/video-template.wxss";
+@import "../template/error-template.wxss";
 
 .search-wrapper {
   overflow: hidden;

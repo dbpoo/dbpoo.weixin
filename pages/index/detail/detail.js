@@ -8,7 +8,7 @@ Page({
   },
   onLoad: function (options) {
     var id = options.id;
-    util.http(app.indexAPI.detail + '?id=' + id, this.getPostDetail)
+    util.http(app.indexAPI.detail + '?id=' + id, this.getPostDetail, this)
   },
   getPostDetail: function (res) {
     var article = res.data.body;

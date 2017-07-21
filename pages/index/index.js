@@ -31,7 +31,7 @@ Page({
     wx.showLoading({
       title: app.globalData.LOADING,
     })
-    util.http(url + '?start=0' + '&count=' + this.data.count, this.getPostList)
+    util.http(url + '?start=0' + '&count=' + this.data.count, this.getPostList, this)
   },
   getUrl: function (index) {
     switch (index) {
@@ -50,8 +50,8 @@ Page({
     }
   },
   getIndexData: function () {
-    util.http(app.indexAPI.swiper, this.getSwiperList);
-    util.http(app.indexAPI.hot + '?start=' + this.data.start + '&count=' + this.data.count, this.getPostList);
+    util.http(app.indexAPI.swiper, this.getSwiperList, this);
+    util.http(app.indexAPI.hot + '?start=' + this.data.start + '&count=' + this.data.count, this.getPostList, this);
   },
   getSwiperList: function (res) {
     if (!res) return;
@@ -75,7 +75,7 @@ Page({
     var index = this.data.navcur;
     var url = this.getUrl(index);
 
-    util.http(url, this.refreshPostList)
+    util.http(url, this.refreshPostList, this)
   },
   refreshPostList: function (res) {
     wx.stopPullDownRefresh()
@@ -97,7 +97,7 @@ Page({
     if (this.data.isComplete) return;
     this.data.start += this.data.count;
     if (this.data.start < this.data.total) {
-      util.http(url + '?start=' + this.data.start + '&count=' + this.data.count, this.morePostList);
+      util.http(url + '?start=' + this.data.start + '&count=' + this.data.count, this.morePostList, this);
     } else {
       this.setData({
         isComplete: true,

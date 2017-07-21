@@ -1,0 +1,30 @@
+.error-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-wrapper view {
+  width: 100%;
+  text-align: center;
+}
+
+.error-wrapper .error-image {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.error-wrapper .error-txt {
+  margin-bottom: 30px;
+  color: #888;
+  font-size: 20px;
+}
+
+.error-wrapper .error-button {
+  margin: 30px 30rpx 0 30rpx;
+}
+
+.error-wrapper .error-image image {
+  width: 322rpx;
+  height: 255rpx;
+}

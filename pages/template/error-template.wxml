@@ -1,0 +1,7 @@
+<template name="error">
+  <view class="error-wrapper">
+    <view class="error-image"><image src="../../images/icon/error.png"></image></view>
+    <view class="error-txt">{{errorTxt}}</view>
+    <view class="error-button"><button type="primary" catchtap="onReload" wx:if="{{!isNet}}">重新加载</button></view>
+  </view>
+</template>

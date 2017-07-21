@@ -15,7 +15,7 @@ Page({
     wx.showLoading({
       title: app.globalData.LOADING,
     })
-    util.http(app.indexAPI.avatar + '?id=' + id, this.getAvatarList);
+    util.http(app.indexAPI.avatar + '?id=' + id, this.getAvatarList, this);
   },
   getAvatarList: function (res) {
     var that = this;
